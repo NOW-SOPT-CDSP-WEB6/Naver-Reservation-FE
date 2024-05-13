@@ -1,6 +1,6 @@
 // vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react-swc';
+import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -11,12 +11,10 @@ export default defineConfig({
       jsxImportSource: '@emotion/react',
     }),
     tsconfigPaths(),
-    svgr(
-      {
-        svgrOptions: {
-          icon: true,
-        }
-      }
-    )
+    svgr({
+      svgrOptions: {
+        icon: true,
+      },
+    }),
   ],
 });

@@ -34,5 +34,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "./src/assets/index.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "./svg.d.ts"]
 }
