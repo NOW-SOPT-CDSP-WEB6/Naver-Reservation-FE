@@ -1,23 +1,26 @@
 /** Global Style 선언 */
-import { css } from "@emotion/react";
-import "./fonts.css";
+import { css } from '@emotion/react';
 
-export const GlobalStyle = css({
-  "*": {
-    padding: 0,
-    margin: 0,
-    boxSizing: "border-box",
+import { fontStyle } from '@/styles/fonts';
 
-    display: "flex",
-  },
+export const GlobalStyle = css`
+  ${fontStyle}
 
-  "ul, ol, li": {
-    listStyle: "none",
-  },
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-  "html, body": {
-    fontFamily: `Pretendard-Medium`,
-    fontSize: "18px",
-  },
+  ul,
+  ol,
+  li {
+    list-style: none;
+  }
 
-});
+  html,
+  body {
+    font-family: Pretendard-Medium;
+    font-size: 18px;
+  }
+`;
