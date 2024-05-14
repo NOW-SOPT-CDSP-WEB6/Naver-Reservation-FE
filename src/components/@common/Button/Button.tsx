@@ -5,13 +5,13 @@ export interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'next' | 'review' | 'look';
     children?: ReactNode;
     size?: 'small' | 'medium' | 'large';
-    Icon?: ReactElement;
+    icon?: ReactElement;
 }
 
-const Button = ({ variant = 'next', children, size='medium', Icon}: IButtonProps) => {
+const Button = ({ variant = 'next', children, size='medium', icon}: IButtonProps) => {
     return (
         <button css={[btnStyle, btnVariant[variant], btnSize[size]]}>
-            {Icon}
+            {icon}
             {children}
         </button>
     );
