@@ -5,7 +5,8 @@ const BottomNavBtn = () => {
     return (
         <div css={s.BtnWrapper}>
             <div css={s.BackBtn}>
-                <Button variant={"back"}>이전</Button>
+                {/* <BackIcon/> */}
+                이전
             </div>
             <div css={s.NextBtn}>
                 <Button variant={"next"}>다음</Button>

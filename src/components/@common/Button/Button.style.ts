@@ -4,6 +4,8 @@ import { css } from "@emotion/react";
 
 export const BtnStyle = ({variant, size}:IButtonProps) => css`
     display: flex;
+    justify-content: center;
+    text-align: center;
     
     width: 100%;
     height: 100%;
