@@ -4,13 +4,13 @@ import Button from "@/components/@common/Button/Button";
 const BottomNavBtn = () => {
     return (
         <div css={s.BtnWrapper}>
-            <div css={s.BackBtn}>
+            <nav css={s.BackBtn}>
                 {/* <BackIcon/> */}
                 이전
-            </div>
-            <div css={s.NextBtn}>
+            </nav>
+            <nav css={s.NextBtn}>
                 <Button variant={"next"}>다음</Button>
-            </div>
+            </nav>
         </div>
     );
 };
