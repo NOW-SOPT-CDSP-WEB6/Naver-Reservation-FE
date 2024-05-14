@@ -4,7 +4,7 @@ import Button from "@/components/@common/Button/Button";
 const BottomNavBtn = () => {
     return (
         <div css={s.BtnWrapper}>
-            <div>
+            <div css={s.BackBtn}>
                 <Button variant={"back"}>이전</Button>
             </div>
             <div css={s.NextBtn}>
