@@ -1,4 +1,4 @@
-import { BtnStyle } from "@/components/@common/Button/Button.style";
+import { btnSize, btnStyle, btnVariant } from "@/components/@common/Button/Button.style";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 export interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,9 +8,9 @@ export interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
     Icon?: null | React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const Button = ({ variant = 'next', children, size, Icon=null }: IButtonProps) => {
+const Button = ({ variant = 'next', children, size='small', Icon=null }: IButtonProps) => {
     return (
-        <button css={BtnStyle({variant, size})}>
+        <button css={[btnStyle, btnVariant[variant], btnSize[size]]}>
             {Icon && <Icon/>}
             {children}
         </button>
