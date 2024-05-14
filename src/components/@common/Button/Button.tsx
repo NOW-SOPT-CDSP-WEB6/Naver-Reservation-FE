@@ -1,24 +1,17 @@
 import { BtnStyle } from "@/components/@common/Button/Button.style";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant: 'back' | 'next' | 'review',
-    children: ReactNode,
+export interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: 'next' | 'review' | 'look';
+    children?: ReactNode;
     size?: 'small' | 'medium';
+    Icon?: null | React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const Button = ({ variant, children, size }: IButtonProps) => {
-    const renderIcon = () => {
-        // if (variant === 'back') {
-        //     return <BackIcon />;
-        // } else if (variant === 'review') {
-        //     return <ReviewIcon />;
-        // }
-        return null;
-    }
+const Button = ({ variant = 'next', children, size, Icon=null }: IButtonProps) => {
     return (
-        <button css={BtnStyle(variant)}>
-            {renderIcon()}
+        <button css={BtnStyle({variant, size})}>
+            {Icon && <Icon/>}
             {children}
         </button>
     );

@@ -1,9 +1,10 @@
+import { IButtonProps } from "@/components/@common/Button/Button";
 import { Theme } from "@/styles/theme";
 import { css } from "@emotion/react";
 
-type ButtonVariantType = 'back' | 'next' | 'review';
-
-export const BtnStyle = (variant:ButtonVariantType) => css`
+export const BtnStyle = ({variant, size}:IButtonProps) => css`
+    display: flex;
+    
     width: 100%;
     height: 100%;
     
@@ -12,9 +13,7 @@ export const BtnStyle = (variant:ButtonVariantType) => css`
     border-radius: 8px;
     border-width: 0;
 
-    color: ${variant === 'next' && "white"};
-    background-color: ${variant === 'back' ? null:
-                        variant === 'next' ? Theme.color.blue300:
-                        Theme.color.gray100 };
+    color: ${variant === 'review' ? Theme.color.gray600 : "white"};
+    background-color: ${variant === 'review' ? Theme.color.gray100 : Theme.color.blue300};
 `;
 
