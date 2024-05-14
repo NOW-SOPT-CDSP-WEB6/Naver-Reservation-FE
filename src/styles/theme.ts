@@ -1,28 +1,28 @@
 const color = {
   // grayscale
-  White: '#FFFFFF',
-  Black: '#222224',
-  LightGray: '#F7F7F9',
-  Background_1: '#F4F7F8',
-  Background_2: '#F0F0F3',
-  Border: '#ECECEF',
-  LowLightGray: '#D1D1D4',
-  MediumGray: '#77777A',
-  Darkgray: '#444446',
+  white: '#FFFFFF',
+  black: '#222224',
+  lightGray: '#F7F7F9',
+  background1: '#F4F7F8',
+  background2: '#F0F0F3',
+  border: '#ECECEF',
+  lowLightGray: '#D1D1D4',
+  mediumGray: '#77777A',
+  darkgray: '#444446',
 
   // Main
 
-  Naver_SkyBlue: '#00C05A',
-  myplace_blue: '#4596E2', // badge
-  NAVER_Blue: '#287CFF',
+  naverSkyBlue: '#00C05A',
+  myplaceBlue: '#4596E2', // badge
+  naverBlue: '#287CFF',
 
-  NAVER_RightGreen: '#EAF8F2',
-  NAVER_Green: '#00C05A',
+  naverRightGreen: '#EAF8F2',
+  naverGreen: '#00C05A',
 
   // badge
-  myplace_pink: '#FF98A0',
-  likebtn_red85: '#FD6777',
-  likebtn_red100: '#FD4D5F',
+  myplacePink: '#FF98A0',
+  likebtnRed85: '#FD6777',
+  likebtnRed100: '#FD4D5F',
 } as const;
 
 const title = {

@@ -18,17 +18,17 @@ export const btnStyle = css({
 export const btnVariant = {
     next: css({
         color: "white",
-        backgroundColor: Theme.color.NAVER_Blue
+        backgroundColor: Theme.color.naverBlue
     }),
 
     review: css({
-        color: Theme.color.Darkgray,
-        backgroundColor: Theme.color.LowLightGray
+        color: Theme.color.darkgray,
+        backgroundColor: Theme.color.lowLightGray
     }),
 
     look: css({
         color: "white",
-        backgroundColor: Theme.color.NAVER_Blue,
+        backgroundColor: Theme.color.naverBlue,
     }),
 }
 
