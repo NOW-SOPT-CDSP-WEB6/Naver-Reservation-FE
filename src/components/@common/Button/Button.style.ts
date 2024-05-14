@@ -5,6 +5,7 @@ type ButtonVariantType = 'back' | 'next' | 'review';
 
 export const BtnStyle = (variant:ButtonVariantType) => css`
     width: 100%;
+    height: 100%;
     
     padding: 10px 44px;
 
