@@ -10,5 +10,5 @@ export const layoutStyle = css({
   width: '375px',
   minHeight: '100vh',
 
-  backgroundColor: Theme.color.gray200,
+  backgroundColor: Theme.color.Background_1,
 });
