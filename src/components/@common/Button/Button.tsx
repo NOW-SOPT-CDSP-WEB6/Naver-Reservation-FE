@@ -4,11 +4,11 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 export interface IButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'next' | 'review' | 'look';
     children?: ReactNode;
-    size?: 'small' | 'medium';
+    size?: 'small' | 'medium' | 'large';
     Icon?: null | React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const Button = ({ variant = 'next', children, size='small', Icon=null }: IButtonProps) => {
+const Button = ({ variant = 'next', children, size='medium', Icon=null }: IButtonProps) => {
     return (
         <button css={[btnStyle, btnVariant[variant], btnSize[size]]}>
             {Icon && <Icon/>}

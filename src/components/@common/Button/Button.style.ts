@@ -34,10 +34,14 @@ export const btnVariant = {
 
 export const btnSize = {
     small: css({
-        
+        fontSize: "12px"
     }),
 
     medium: css({
+        fontSize: "14px"
+    }),
 
+    large: css({
+        fontSize: "16px"
     }),
 }
