@@ -1,10 +1,12 @@
 import ContentBox from "@/components/@common/ContentBox/ContentBox";
 import { Wrapper, plusBtn, text } from "@/pages/reviewPage/DragDrop/DragDrop.style";
 import PlusBtn from "@/assets/svgs/review/review_btn_plus.svg?react"
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const DragDrop = () => {
   const [image, setImage] = useState<string>();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
@@ -19,7 +21,22 @@ const DragDrop = () => {
 
     reader.readAsDataURL(file);
   }
-  console.log({image})
+
+  const onChangeImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files ? e.target.files[0] : null;
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event: ProgressEvent<FileReader>) => {
+        setImage(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleClick = () => {
+    console.log("click")
+    fileInputRef.current?.click();
+  };
   return (
     <ContentBox
       variant='round2'
@@ -37,13 +54,21 @@ const DragDrop = () => {
         onDragOver={handleDragOver}
         onDrop={handleDrop}
       >
-        {
-          !image &&
+        {!image && (
           <>
             <span css={text}>사진을 추가해 주세요</span>
-            <PlusBtn css={plusBtn} />
+            <div onClick={handleClick}>
+              <PlusBtn css={plusBtn}/>
+            </div>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              accept="image/*"
+              onChange={onChangeImage}
+            />
           </>
-        }
+        )}
       </section>
     </ContentBox>
   );

@@ -17,5 +17,7 @@ export const text = css({
 })
 export const plusBtn = css({
     width: "49px",
-    height: "49px"
+    height: "49px",
+
+    cursor: "pointer"
 })
