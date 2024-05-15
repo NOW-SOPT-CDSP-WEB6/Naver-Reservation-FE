@@ -22,6 +22,10 @@ export interface BoxStyleProps {
   boxShadow?: string;
   backgroundColor?: string;
   color?: string;
+  backgroundImage?: string;
+  backgroundSize?: string;
+  backgroundPosition?: string;
+  backgroundRepeat?: string;
 }
 
 export const getBoxStyle = ({
@@ -44,6 +48,10 @@ export const getBoxStyle = ({
   boxShadow = '',
   backgroundColor = '',
   color = '',
+  backgroundImage = '',
+  backgroundSize = '',
+  backgroundPosition = '',
+  backgroundRepeat = '',
 }: BoxStyleProps) =>
   css({
     display,
@@ -65,4 +73,8 @@ export const getBoxStyle = ({
     boxShadow,
     backgroundColor,
     color,
+    backgroundImage,
+    backgroundSize,
+    backgroundPosition,
+    backgroundRepeat,
   });
