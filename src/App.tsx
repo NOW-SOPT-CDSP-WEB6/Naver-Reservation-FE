@@ -7,7 +7,7 @@ function App() {
   return (
     <MobileLayout>
       <Header />
-      <main style={{width: "100%"}}>
+      <main>
         <Outlet />
       </main>
     </MobileLayout>
