@@ -22,10 +22,10 @@ export const btnVariant = {
     backgroundColor: Theme.color.naverBlue,
   }),
 
-  review: css({
-    color: Theme.color.darkgray,
-    backgroundColor: Theme.color.lowLightGray,
-  }),
+    review: css({
+        color: Theme.color.darkgray,
+        backgroundColor: Theme.color.lightGray
+    }),
 
   look: css({
     color: 'white',
