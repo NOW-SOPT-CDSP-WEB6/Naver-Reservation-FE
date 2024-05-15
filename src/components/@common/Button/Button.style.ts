@@ -23,7 +23,7 @@ export const btnVariant = {
 
     review: css({
         color: Theme.color.darkgray,
-        backgroundColor: Theme.color.lowLightGray
+        backgroundColor: Theme.color.lightGray
     }),
 
     look: css({

@@ -28,6 +28,7 @@ export const badgeStyle = {
         padding: "3px 9px",
 
         borderRadius: "2px",
+        color: Theme.color.darkgray,
         backgroundColor: Theme.color.background2,
 
         fontSize: "12px",
