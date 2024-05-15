@@ -1,13 +1,15 @@
 import { Theme } from "@/styles/theme";
 import { css } from "@emotion/react";
 
-export const badgeStyle = {
+export const badgeStyle = css({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "fit-content",
+})
+
+export const customStyle = {
     default: css({
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        
-        width: "fit-content",
         padding: "6px 14px",
 
         borderRadius: "6px",
@@ -20,11 +22,6 @@ export const badgeStyle = {
     }),
 
     small: css({
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        
-        width: "fit-content",
         padding: "3px 9px",
 
         borderRadius: "2px",
