@@ -1,21 +1,65 @@
 import { css } from '@emotion/react';
 
-import { Theme } from '@/styles/theme';
+export interface BoxStyleProps {
+  display?: string;
+  flexDirection?: string;
+  boxSizing?: string;
+  width?: string;
+  height?: string;
+  margin?: string;
+  marginTop?: string;
+  marginLeft?: string;
+  marginBottom?: string;
+  padding?: string;
+  paddingTop?: string;
+  paddingRight?: string;
+  paddingBottom?: string;
+  paddingLeft?: string;
+  border?: string;
+  borderRadius?: string;
+  borderColor?: string;
+  boxShadow?: string;
+  backgroundColor?: string;
+  color?: string;
+}
 
-export const boxStyle = css({
-  display: 'flex',
-  flexDirection: 'column',
-  boxSizing: 'border-box',
-  width: '343px',
-  height: '100%',
-  backgroundColor: Theme.color.white,
-});
-
-export const boxShadow = {
-  none: css({
-    boxShadow: 'none',
-  }),
-  show: css({
-    boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.10)',
-  }),
-};
+export const getBoxStyle = ({
+  display = '',
+  width = '',
+  height = '',
+  margin = '',
+  marginTop = '',
+  marginLeft = '',
+  marginBottom = '',
+  padding = '',
+  paddingTop = '',
+  paddingRight = '',
+  paddingBottom = '',
+  paddingLeft = '',
+  border = '',
+  borderRadius = '',
+  borderColor = '',
+  boxShadow = '',
+  backgroundColor = '',
+  color = '',
+}: BoxStyleProps) =>
+  css({
+    display,
+    width,
+    height,
+    margin,
+    marginTop,
+    marginLeft,
+    marginBottom,
+    padding,
+    paddingTop,
+    paddingRight,
+    paddingBottom,
+    paddingLeft,
+    border,
+    borderRadius,
+    borderColor,
+    boxShadow,
+    backgroundColor,
+    color,
+  });
