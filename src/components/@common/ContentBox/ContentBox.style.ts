@@ -9,6 +9,7 @@ export interface BoxStyleProps {
   margin?: string;
   marginTop?: string;
   marginLeft?: string;
+  marginRight?: string;
   marginBottom?: string;
   padding?: string;
   paddingTop?: string;
@@ -30,6 +31,7 @@ export const getBoxStyle = ({
   margin = '',
   marginTop = '',
   marginLeft = '',
+  marginRight = '',
   marginBottom = '',
   padding = '',
   paddingTop = '',
@@ -50,6 +52,7 @@ export const getBoxStyle = ({
     margin,
     marginTop,
     marginLeft,
+    marginRight,
     marginBottom,
     padding,
     paddingTop,
