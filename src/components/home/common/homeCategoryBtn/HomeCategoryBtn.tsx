@@ -12,10 +12,9 @@ import { getCategoryIcon } from '@/utils/category';
 export interface HomeBtnProps extends ButtonHTMLAttributes<HTMLDivElement> {
   category: string;
   isSelected?: boolean;
-  text?: string;
 }
 
-const HomeCategoryBtn = ({ category, isSelected = false, text, ...props }: HomeBtnProps) => {
+const HomeCategoryBtn = ({ category, isSelected = false, ...props }: HomeBtnProps) => {
   const Icon = getCategoryIcon(category, isSelected);
 
   return (
@@ -23,7 +22,7 @@ const HomeCategoryBtn = ({ category, isSelected = false, text, ...props }: HomeB
       <div css={[iconStyle, selectStyle(isSelected)]}>
         {Icon && <Icon width={40} height={40} />}
       </div>
-      <Text>{text}</Text>
+      <Text>{category}</Text>
     </div>
   );
 };
