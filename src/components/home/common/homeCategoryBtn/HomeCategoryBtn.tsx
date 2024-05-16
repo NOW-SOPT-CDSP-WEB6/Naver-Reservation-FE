@@ -16,7 +16,7 @@ export interface HomeBtnProps extends ButtonHTMLAttributes<HTMLDivElement> {
 }
 
 const HomeCategoryBtn = ({ category, isSelected = false, text, ...props }: HomeBtnProps) => {
-  const Icon = getCategoryIcon(category, !isSelected);
+  const Icon = getCategoryIcon(category, isSelected);
 
   return (
     <div role="button" tabIndex={0} aria-label="카테고리 버튼" css={buttonStyle} {...props}>
