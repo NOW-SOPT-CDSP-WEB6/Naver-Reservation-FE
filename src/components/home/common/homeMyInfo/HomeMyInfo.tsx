@@ -11,7 +11,7 @@ const HomeMyInfo = ({ totalCount, totalExpense, ...props }: HomeMyInfoProps) => 
   return (
     <p css={textStyle} {...props}>
       최주용님은 <span css={highlightStyle}>{totalCount}</span>회 예약하셨고,{' '}
-      <span css={highlightStyle}>{totalExpense}</span>원 결제하셨어요.
+      <span css={highlightStyle}>{Number(totalExpense).toLocaleString()}</span>원 결제하셨어요.
     </p>
   );
 };
