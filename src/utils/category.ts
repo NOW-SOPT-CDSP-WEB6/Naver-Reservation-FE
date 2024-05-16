@@ -17,28 +17,28 @@ import TicketWhiteIcon from '@assets/svgs/home/home_ic_ticket_white.svg?react';
 
 export const getCategoryIcon = (category: string, isSelected: boolean) => {
   switch (category) {
-    case 'all': {
+    case '전체': {
       return !isSelected ? AllIcon : AllWhiteIcon;
     }
-    case 'beauty': {
+    case '뷰티': {
       return !isSelected ? BeautyIcon : BeautyWhiteIcon;
     }
-    case 'health': {
+    case '병의원': {
       return !isSelected ? HealthIcon : HealthWhiteIcon;
     }
-    case 'life': {
+    case '생활/클래스': {
       return !isSelected ? LifeIcon : LifeWhiteIcon;
     }
-    case 'living': {
+    case '숙박': {
       return !isSelected ? LivingIcon : LivingWhiteIcon;
     }
-    case 'restaurant': {
+    case '식당/카페': {
       return !isSelected ? RestaurantIcon : RestaurantWhiteIcon;
     }
-    case 'sport': {
+    case '스포츠/레저': {
       return !isSelected ? SportIcon : SportWhiteIcon;
     }
-    case 'ticket': {
+    case '공연/전시': {
       return !isSelected ? TicketIcon : TicketWhiteIcon;
     }
     default: {
