@@ -10,14 +10,8 @@ interface ReviewWritingProps {
 
 const ReviewWriting = ({ }: ReviewWritingProps) => {
   const [text, setText] = useState("");
-  const [charCnt, setCharCnt] = useState(0);
   const [isFocus, setIsFocus] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  console.log({charCnt});
-  useEffect(() => {
-    setCharCnt(text.length);
-  }, [text]);
 
   useEffect(() => {
     if (isFocus && textareaRef.current) {
@@ -54,7 +48,7 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
           </div>
         )}
         <div css={cntWrapper}>
-          {charCnt} / {REVIEW_CHAR_MAXIMUM}
+          {text.length} / {REVIEW_CHAR_MAXIMUM}
         </div>
       </section>
     </ContentBox>
