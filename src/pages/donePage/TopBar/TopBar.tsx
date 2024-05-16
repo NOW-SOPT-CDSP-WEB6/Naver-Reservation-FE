@@ -5,9 +5,9 @@ import ExitBtn from '@/assets/svgs/done/done_ic_exit.svg?react';
 
 const TopBar = () => {
   return (
-    <section css={Wrapper}>
+    <header css={Wrapper}>
       <ExitBtn css={ExitBtnStyle}></ExitBtn>
-    </section>
+    </header>
   );
 };
 

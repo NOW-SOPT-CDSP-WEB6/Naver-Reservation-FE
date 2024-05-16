@@ -9,14 +9,14 @@ export const HeaderWrapper = css({
   flexShrink: '0',
 });
 
-export const topTitle = css({
+export const alignCenter = css({
   display: 'flex',
   justifyContent: 'center',
 });
 
 export const blueHighlight = css({
   color: Theme.color.naverBlue,
-  marginRight: '4px',
+  margin: '0px 4px',
 });
 
 export const topDetail = css({

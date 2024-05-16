@@ -1,8 +1,8 @@
 import {
   HeaderWrapper,
+  alignCenter,
   blueHighlight,
   topDetail,
-  topTitle,
 } from '@/pages/donePage/DoneHeader/DoneHeader.style';
 
 import Text from '@/components/@common/Text/Text';
@@ -13,7 +13,7 @@ const DoneHeader = () => {
     <>
       <section css={HeaderWrapper}>
         <Title size={'large'}>
-          <span css={topTitle}>
+          <span css={alignCenter}>
             <span css={blueHighlight}>2번째</span> 리뷰 쓰기 완료!
           </span>
         </Title>

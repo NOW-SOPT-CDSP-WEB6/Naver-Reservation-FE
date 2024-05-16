@@ -7,7 +7,6 @@ function App() {
   return (
     <MobileLayout>
       <Header />
-
       <main>
         <Outlet />
       </main>
