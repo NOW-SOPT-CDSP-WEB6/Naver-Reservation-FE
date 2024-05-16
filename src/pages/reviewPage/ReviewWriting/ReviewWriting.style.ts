@@ -13,7 +13,7 @@ export const title = css({
     gap: "3px",
     color: Theme.color.mediumGray,
 
-    fontSize: "14px",
+    fontSize: Theme.text.writing.fontSize,
     fontWeight: "600",
 });
 
@@ -22,7 +22,7 @@ export const detail = css({
 
     color: Theme.color.mediumGray,
 
-    fontSize: "14px",
+    fontSize: Theme.text.writing.fontSize,
     fontWeight: "400",
     lineHeight: "19.6px"
 });
@@ -35,7 +35,7 @@ export const writing = css({
     border: "0px",
     outline: 'none',
 
-    fontSize: "14px",
+    fontSize: Theme.text.writing.fontSize,
     fontWeight: "500",
     lineHeight: "19.6px",
 
@@ -54,6 +54,6 @@ export const cntWrapper = css({
 
     color: Theme.color.mediumGray,
 
-    fontSize: "12px",
+    fontSize: Theme.text.small.fontSize,
     fontWeight: "500"
 });
