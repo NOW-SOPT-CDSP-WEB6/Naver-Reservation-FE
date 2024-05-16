@@ -59,7 +59,7 @@ export const cntWrapper = css({
 });
 
 export const caption = css({
-    padding: "15px 0 0 16px",
+    padding: "15px 0 29px 16px",
     gap: "2px",
 
     color: Theme.color.mediumGray,
