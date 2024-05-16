@@ -87,3 +87,26 @@ export const detailContainerStyle = css({
   borderRadius: Theme.borderRadius.medium,
   padding: '12px 26px',
 });
+
+export const detailHeaderStyle = css({
+  display: 'flex',
+  justifyContent: 'space-between',
+
+  padding: '24px 0px',
+
+  '& > p:first-child': {
+    fontSize: '20px',
+  },
+
+  '& > p:last-child': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  },
+});
+
+export const listStyle = css({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '16px',
+});

@@ -38,7 +38,7 @@ const HomeReservationCard = ({
   const Icon = getCategoryIcon(category, true);
 
   return (
-    <div>
+    <li>
       <HomeReservationCardHeader
         storeName={storeName}
         reservationDate={reservationDate}
@@ -58,7 +58,7 @@ const HomeReservationCard = ({
         />
         <HomeReservationCardReview review={review} />
       </HomeReservationCardDetail>
-    </div>
+    </li>
   );
 };
 
