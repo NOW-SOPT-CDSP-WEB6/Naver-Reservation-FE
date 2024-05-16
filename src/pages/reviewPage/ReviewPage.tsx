@@ -1,3 +1,5 @@
+import Header from '@/pages/reviewPage/Header/Header';
+
 const ReviewPage = () => {
   return (
     <>
