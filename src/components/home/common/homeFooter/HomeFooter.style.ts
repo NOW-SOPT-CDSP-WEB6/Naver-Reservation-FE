@@ -40,23 +40,24 @@ export const selectStyle = css({
   display: 'flex',
   alignItems: 'center',
   gap: '12px',
-  backgroundColor: 'white',
-  borderRadius: '5px',
-  padding: '4px 8px',
 
+  padding: '4px 8px',
   marginTop: '24px',
 
-  color: Theme.color.darkgray,
+  backgroundColor: 'white',
+  borderRadius: '5px',
+
   fontSize: Theme.text.small.fontSize,
   lineHeight: Theme.text.small.lineHeight,
+  color: Theme.color.darkgray,
 });
 
 export const footerNavStyle = css({
+  margin: '6px 0px 4px 0px',
+
   fontSize: Theme.text.medium.fontSize,
   fontWeight: '400',
   color: Theme.color.mediumGray,
-
-  margin: '6px 0px 4px 0px',
 
   '& > span': {
     display: 'inline',
@@ -70,6 +71,5 @@ export const footerDetailStyle = css({
   fontSize: Theme.text.small.fontSize,
   lineHeight: Theme.text.small.lineHeight,
   color: Theme.color.mediumGray,
-
   fontWeight: 400,
 });
