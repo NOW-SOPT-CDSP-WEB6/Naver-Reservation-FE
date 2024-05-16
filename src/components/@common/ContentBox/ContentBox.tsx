@@ -12,7 +12,7 @@ const ContentBox = ({ children, styles = {}, variant = 'default' }: BoxProps) =>
   const roundStyles = {
     ...(variant !== 'default' ? { marginLeft: "16px", marginRight: "16px", backgroundColor: Theme.color.white } : {}),
     ...(variant === 'round' ? { borderRadius: "15px" } : {}),
-    ...(variant === 'round2' ? { borderRadius: "20px", border: `1px dashed ${Theme.color.background2}` } : {}),
+    ...(variant === 'round2' ? { borderRadius: "20px"} : {}),
   };
   return <div css={getBoxStyle({...styles, ...roundStyles})}>{children}</div>;
 };

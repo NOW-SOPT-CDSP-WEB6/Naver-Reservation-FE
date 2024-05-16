@@ -2,6 +2,7 @@ import ContentBox from "@/components/@common/ContentBox/ContentBox";
 import { Wrapper, plusBtn, text } from "@/pages/reviewPage/DragDrop/DragDrop.style";
 import PlusBtn from "@/assets/svgs/review/review_btn_plus.svg?react"
 import { useState } from "react";
+import { Theme } from "@/styles/theme";
 
 const DragDrop = () => {
   const [image, setImage] = useState<string>();
@@ -38,6 +39,7 @@ const DragDrop = () => {
       styles={{
         height: '180px',
         marginTop: '20px',
+        border: `1px dashed ${Theme.color.background2}`,
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
