@@ -4,6 +4,8 @@ import { css } from "@emotion/react";
 export const headerWrapper = css({
     width: "100%",
     padding: "24px 38px 21px 17px",
+
+    backgroundColor: Theme.color.white,
 });
 
 export const headerTitle = css({
