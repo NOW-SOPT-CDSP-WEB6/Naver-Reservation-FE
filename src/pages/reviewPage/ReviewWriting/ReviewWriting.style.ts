@@ -57,3 +57,13 @@ export const cntWrapper = css({
     fontSize: Theme.text.small.fontSize,
     fontWeight: "500"
 });
+
+export const caption = css({
+    padding: "15px 0 0 16px",
+    gap: "2px",
+
+    color: Theme.color.mediumGray,
+
+    fontSize: Theme.text.small.fontSize,
+    fontWeight: "500",
+})
