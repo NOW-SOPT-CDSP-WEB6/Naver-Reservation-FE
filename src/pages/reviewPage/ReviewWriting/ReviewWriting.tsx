@@ -1,7 +1,7 @@
 import ContentBox from "@/components/@common/ContentBox/ContentBox";
 import ReviewIcon from "@/assets/svgs/review/home_ic_pen.svg?react"
 import { cntWrapper, detail, title, wrapper, writing } from "@/pages/reviewPage/ReviewWriting/ReviewWriting.style";
-import { REVIEW_PLACE_HOLDER } from "@/constants";
+import { REVIEW_PLACE_HOLDER, REVIEW_CHAR_MAXIMUM } from "@/constants";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 interface ReviewWritingProps {
@@ -26,7 +26,9 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
   }, [isFocus])
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value);
+    if (e.target.value.length <= REVIEW_CHAR_MAXIMUM) {
+      setText(e.target.value);
+    }
   };
 
   return (
@@ -52,7 +54,7 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
           </div>
         )}
         <div css={cntWrapper}>
-          {Math.max(charCnt, 0)} / 400
+          {charCnt} / {REVIEW_CHAR_MAXIMUM}
         </div>
       </section>
     </ContentBox>
