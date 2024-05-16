@@ -20,7 +20,7 @@ export const GlobalStyle = css`
 
   html,
   body {
-    font-family: Pretendard-Medium;
+    font-family: 'Pretendard-Medium';
     font-size: 18px;
   }
 `;

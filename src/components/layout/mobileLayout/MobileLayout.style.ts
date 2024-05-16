@@ -10,5 +10,9 @@ export const layoutStyle = css({
   width: '375px',
   minHeight: '100vh',
 
+  '& > main': {
+    width: '100%',
+  },
+
   backgroundColor: Theme.color.background1,
 });
