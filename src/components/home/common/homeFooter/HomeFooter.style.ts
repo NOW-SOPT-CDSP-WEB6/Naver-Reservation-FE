@@ -9,7 +9,7 @@ export const footerStyle = css({
 
   width: '100%',
 
-  padding: '24px',
+  padding: '24px 20px',
 
   backgroundColor: Theme.color.background2,
 });
@@ -69,7 +69,7 @@ export const footerDetailStyle = css({
   textAlign: 'center',
 
   fontSize: Theme.text.small.fontSize,
-  lineHeight: Theme.text.small.lineHeight,
+  lineHeight: Theme.text.large.lineHeight,
   color: Theme.color.mediumGray,
   fontWeight: 400,
 });
