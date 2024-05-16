@@ -15,7 +15,10 @@ import SportWhiteIcon from '@assets/svgs/home/home_ic_sport_white.svg?react';
 import TicketIcon from '@assets/svgs/home/home_ic_ticket.svg?react';
 import TicketWhiteIcon from '@assets/svgs/home/home_ic_ticket_white.svg?react';
 
-export const getCategoryIcon = (category: string, isSelected: boolean) => {
+export const getCategoryIcon = (
+  category: string,
+  isSelected: boolean,
+): React.FC<React.SVGProps<SVGSVGElement>> => {
   switch (category) {
     case '전체': {
       return !isSelected ? AllIcon : AllWhiteIcon;
