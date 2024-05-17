@@ -1,5 +1,13 @@
+import Header from "@/pages/keywordPage/Header/Header";
+import TotalPrice from "@/pages/keywordPage/TotalPrice/TotalPrice";
+
 const KeywordPage = () => {
-  return <h1>Keyword Page</h1>;
+  return (
+    <>
+      <Header />
+      <TotalPrice />
+    </>
+  );
 };
 
 export default KeywordPage;
