@@ -5,6 +5,7 @@ import { Theme } from '@/styles/theme';
 export const btnStyle = css({
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   textAlign: 'center',
 
   width: '100%',
