@@ -1,6 +1,7 @@
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
 import {
   RateWrapper,
+  SlideWrapper,
   StarIcon,
   TextSpace,
   mediumTextColor,
@@ -41,7 +42,10 @@ const ReviewList = () => {
           995개 평점 (769명)
         </Text>
       </p>
-      <ReviewContents />
+      <div css={SlideWrapper}>
+        <ReviewContents />
+        <ReviewContents />
+      </div>
     </ContentBox>
   );
 };

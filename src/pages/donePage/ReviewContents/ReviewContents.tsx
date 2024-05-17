@@ -1,6 +1,6 @@
+import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
 import {
   AlignCenter,
-  BadgeAlign,
   ReviewDetail,
   ReviewImg,
   ReviewText,
@@ -10,7 +10,9 @@ import { ImageStyle, TextColor } from '@/pages/donePage/ReviewContents/ReviewCon
 import Badge from '@/components/@common/Badge/Badge';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
-import Title from '@/components/@common/Title/Title';
+
+import ProfImg from '@/assets/svgs/done/prof_img.svg?react';
+import DetailImg from '@/assets/svgs/done/review_img.svg?react';
 
 import { Theme } from '@/styles/theme';
 
@@ -25,10 +27,12 @@ const ReviewContents = () => {
           border: `1px solid ${Theme.color.border}`,
           marginLeft: '20px',
           paddingLeft: '12px',
+          paddingRight: '12px',
+          backgroundColor: Theme.color.white,
         }}
       >
         <section css={ReviewDetail}>
-          <img css={ImageStyle}></img>
+          <ProfImg css={ImageStyle}></ProfImg>
           <div>
             <Text size={'medium'}>하윙</Text>
             <Text size={'small'} css={TextColor}>
@@ -36,12 +40,15 @@ const ReviewContents = () => {
             </Text>
           </div>
         </section>
-        <div css={AlignCenter}>
-          <Text size={'medium'} css={ReviewText}>
-            좋아요굿이에요좋아요굿이요좋아요굿이요좋아요
-          </Text>
-          <img css={ReviewImg}></img>
-        </div>
+        <section css={SlideWrapper}>
+          <div css={AlignCenter}>
+            <Text size={'medium'} css={ReviewText}>
+              <p>좋아요굿이에요좋아요굿이요좋아요굿이요좋아요</p>
+            </Text>
+            <DetailImg css={ReviewImg}></DetailImg>
+          </div>
+        </section>
+
         <Badge size="small">
           <span>친절해요💓</span>
         </Badge>

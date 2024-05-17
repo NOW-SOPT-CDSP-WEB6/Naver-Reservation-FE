@@ -25,4 +25,13 @@ const StarIcon = css({
   height: '20px',
 });
 
-export { mediumTextColor, RateWrapper, TextSpace, StarIcon };
+const SlideWrapper = css({
+  display: 'flex',
+  flexDirection: 'row',
+  overflow: 'auto',
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
+});
+
+export { mediumTextColor, RateWrapper, TextSpace, StarIcon, SlideWrapper };

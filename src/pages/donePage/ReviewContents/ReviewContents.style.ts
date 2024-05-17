@@ -6,7 +6,7 @@ export const ImageStyle = css({
   width: '40px',
   height: '40px',
   borderRadius: '50%',
-  marginRight: '7px',
+  marginRight: '12px',
   marginLeft: '0px',
 });
 
