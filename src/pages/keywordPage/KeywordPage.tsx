@@ -1,5 +1,7 @@
+import BottomNavBtn from "@/components/@common/BottomNavBtn/BottomNavBtn";
 import Carousel from "@/pages/keywordPage/Carousel/Carousel";
 import Header from "@/pages/keywordPage/Header/Header";
+import LikeBox from "@/pages/keywordPage/LikeBox/LikeBox";
 import TotalPrice from "@/pages/keywordPage/TotalPrice/TotalPrice";
 
 const KeywordPage = () => {
@@ -8,6 +10,8 @@ const KeywordPage = () => {
       <Header />
       <TotalPrice />
       <Carousel />
+      <LikeBox />
+      <BottomNavBtn />
     </>
   );
 };
