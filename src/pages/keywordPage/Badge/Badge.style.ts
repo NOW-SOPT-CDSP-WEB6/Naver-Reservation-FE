@@ -5,8 +5,12 @@ export const badgeWrapper = css({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  flexWrap: "nowrap",
+  whiteSpace: "nowrap",
 
+  width: "fit-content",
   padding: "6px 14px",
+  marginBottom: "6px",
 
   borderRadius: "6px",
   border: `1px solid ${Theme.color.border}`,

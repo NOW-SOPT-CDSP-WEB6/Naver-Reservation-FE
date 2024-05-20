@@ -8,5 +8,5 @@ export const title = css({
   fontSize: Theme.text.medium.fontSize,
   fontWeight: 600,
 
-  paddingBottom: "7px",
+  paddingBottom: "13px",
 })

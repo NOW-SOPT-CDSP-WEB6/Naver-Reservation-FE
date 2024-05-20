@@ -43,4 +43,6 @@ export const detail = css({
 export const carouselWrapper = css({
   display: "flex",
   gap: "38px",
+
+  overflowX: "scroll"
 });
