@@ -1,5 +1,15 @@
+import DoneHeader from '@/pages/donePage/DoneHeader/DoneHeader';
+import ReviewList from '@/pages/donePage/ReviewBox/ReviewBox';
+import TopBar from '@/pages/donePage/TopBar/TopBar';
+
 const DonePage = () => {
-  return <h1>Done Page</h1>;
+  return (
+    <>
+      <TopBar />
+      <DoneHeader />
+      <ReviewList />
+    </>
+  );
 };
 
 export default DonePage;
