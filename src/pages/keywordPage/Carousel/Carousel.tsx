@@ -3,11 +3,13 @@ import * as s from "./Carousel.style"
 import Text from "@/components/@common/Text/Text";
 import { BADGE_CATEGORY } from "@/constants/badge";
 import CarouselCard from "@/pages/keywordPage/CarouselCard/CarouselCard";
+import { useState } from "react";
 
 interface CarouselProps { }
 
 
 const Carousel = ({ }: CarouselProps) => {
+  const [isFullBadge, setIsFullBadge] = useState<boolean>(false);
   const category = "뷰티";
 
   return (
@@ -26,7 +28,9 @@ const Carousel = ({ }: CarouselProps) => {
       <section css={s.carouselWrapper}>
         {
           BADGE_CATEGORY[category].map((badge) => {
-            return (<CarouselCard badgeTitle={badge} />)
+            return (
+                <CarouselCard badgeTitle={badge} isFullBadge={isFullBadge} setIsFullBadge={setIsFullBadge}/>
+            )
           })
         }
       </section>

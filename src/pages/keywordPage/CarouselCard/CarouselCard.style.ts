@@ -10,3 +10,10 @@ export const title = css({
 
   paddingBottom: "13px",
 })
+
+export const fullBtn = css({
+  display: "flex",
+  justifyContent: "center",
+
+  paddingTop: "60px",
+})

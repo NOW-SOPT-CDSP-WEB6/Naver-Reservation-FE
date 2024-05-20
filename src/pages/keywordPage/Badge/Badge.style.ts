@@ -1,7 +1,7 @@
 import { Theme } from "@/styles/theme";
 import { css } from "@emotion/react";
 
-export const badgeWrapper = css({
+export const badgeWrapper = (isClick: boolean) => css({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -13,9 +13,13 @@ export const badgeWrapper = css({
   marginBottom: "6px",
 
   borderRadius: "6px",
-  border: `1px solid ${Theme.color.border}`,
+  border: `1px solid ${isClick ? Theme.color.naverBlue : Theme.color.border}`,
+
+  backgroundColor: `${isClick ? Theme.color.naverSkyBlue : Theme.color.white}`,
 
   fontSize: Theme.text.medium.fontSize,
   fontWeight: 400,
   lineHeight: "19.6px",
+
+  cursor: "pointer"
 })
