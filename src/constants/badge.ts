@@ -1,4 +1,4 @@
-const badge = {
+export const BADGE: { [key: string]: { "id": number, "title": string, "category": string }[] } = {
     "스타일": [
         {
             id: 1,
@@ -375,7 +375,7 @@ const badge = {
     ]
 }
 
-const badgeCategory = {
+export const BADGE_CATEGORY = {
     "뷰티": ["스타일", "시술/서비스", "가격/기타"],
     "생활/클래스": ["서비스/가격", "시설/기타"],
     "식당/카페": ["음식/가격", "분위기", "시설/기타"],
