@@ -17,7 +17,7 @@ const Carousel = ({ }: CarouselProps) => {
       variant='round'
       styles={{
         marginTop: '12px',
-        padding: '26px 0 42px 20px',
+        padding: `26px 0 ${isFullBadge ? "42px" : 0} 20px`,
       }}
     >
       <header css={s.header}>

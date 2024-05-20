@@ -5,6 +5,8 @@ export const badgeWrapper = (isClick: boolean) => css({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  zIndex: "0",
+
   flexWrap: "nowrap",
   whiteSpace: "nowrap",
 
