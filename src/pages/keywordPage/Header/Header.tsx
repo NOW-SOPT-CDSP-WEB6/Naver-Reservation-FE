@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import * as s from '@/pages/keywordPage/Header/Header.style';
 
-import headerSrc from '@/assets/img/keyword_img_1.png';
+import headerSrc from '@/assets/img/keyword_img1.png';
 
 interface HeaderProps {}
 
