@@ -24,3 +24,5 @@ export const DAY_IN_WEEKS = ['일', '월', '화', '수', '목', '금', '토', '�
 
 export const REVIEW_PLACE_HOLDER = "리뷰 작성 시 유의사항 한 번 확인하기! 리뷰를 보는 사용자와 협업자에게 상처가 되는 욕설, 비방, 명예훼손성 표현은 사용하지 말아주세요.";
 export const REVIEW_CHAR_MAXIMUM = 400;
+
+export const KEYWORD_LIKE_LETTER = "'좋아요' 누르고 취향이 비슷한 사람은 추천받으세요."
