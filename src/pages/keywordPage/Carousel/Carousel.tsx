@@ -29,7 +29,7 @@ const Carousel = ({ }: CarouselProps) => {
         {
           BADGE_CATEGORY[category].map((badge) => {
             return (
-                <CarouselCard badgeTitle={badge} isFullBadge={isFullBadge} setIsFullBadge={setIsFullBadge}/>
+                <CarouselCard badgeTitle={badge} isFullBadge={isFullBadge} setIsFullBadge={setIsFullBadge} />
             )
           })
         }
