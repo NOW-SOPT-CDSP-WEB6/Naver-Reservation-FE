@@ -11,7 +11,9 @@ export const myInfoContainerStyle = css({
 
 export const boxStyle = {
   width: '100%',
-  backgroundColor: Theme.color.white,
+
   padding: '24px 12px',
   marginTop: '12px',
+
+  backgroundColor: Theme.color.white,
 };

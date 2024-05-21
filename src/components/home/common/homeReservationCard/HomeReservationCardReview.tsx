@@ -36,7 +36,9 @@ const HomeReservationCardReview = ({
 export default HomeReservationCardReview;
 
 const reviewStatusText = css({
-  textAlign: 'center',
-  color: Theme.color.naverBlue,
   marginTop: '6px',
+
+  color: Theme.color.naverBlue,
+
+  textAlign: 'center',
 });

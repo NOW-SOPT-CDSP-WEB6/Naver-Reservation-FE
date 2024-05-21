@@ -12,7 +12,7 @@ const color = {
 
   // Main
 
-  naverSkyBlue: '#EDF3FD',
+  naverSkyBlue: '#00C05A',
   myplaceBlue: '#4596E2', // badge
   naverBlue: '#287CFF',
 

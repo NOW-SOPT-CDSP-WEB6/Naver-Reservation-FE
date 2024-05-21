@@ -27,5 +27,3 @@ export const REVIEW_PLACE_HOLDER =
 export const REVIEW_CHAR_MAXIMUM = 400;
 
 export const CHIPS = ['방문 완료', '방문 예정', '취소/노쇼', '기간선택'];
-
-export const KEYWORD_LIKE_LETTER = "'좋아요' 누르고 취향이 비슷한 사람은 추천받으세요."

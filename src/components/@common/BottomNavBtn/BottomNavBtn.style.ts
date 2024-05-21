@@ -7,7 +7,6 @@ export const BtnWrapper = css({
     gap: "55px",
 
     paddingTop: "3px",
-    paddingBottom: "10px",
     fontSize: "16px"
 });
 
