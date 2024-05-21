@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
 
 import Text from '@/components/@common/Text/Text';
 import {
@@ -9,14 +9,16 @@ import {
 import UpArrow from '@/assets/svgs/home/home_ic_up.svg?react';
 
 interface HomeReservationCardListProps extends ComponentPropsWithoutRef<'ul'> {
-  children: ReactElement[];
+  children: ReactNode;
 }
 
 const HomeReservationCardList = ({ children }: HomeReservationCardListProps) => {
+  const elements = children as ReactElement[];
+
   return (
     <>
       <div css={detailHeaderStyle}>
-        <Text>총 {children.length}건</Text>
+        <Text>총 {elements?.length}건</Text>
         <Text size="medium">
           방문일자
           <UpArrow />

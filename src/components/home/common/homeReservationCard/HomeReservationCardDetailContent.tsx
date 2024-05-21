@@ -8,7 +8,7 @@ import { detailStyle } from '@/components/home/common/homeReservationCard/HomeRe
 interface HomeReservationCardDetailContentProps extends HTMLAttributes<HTMLDivElement> {
   mainDescription: string;
   subDescription: string;
-  price: string;
+  price: number;
 }
 
 const HomeReservationCardDetailContent = ({

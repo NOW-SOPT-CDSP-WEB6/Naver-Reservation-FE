@@ -1,27 +1,42 @@
+import { css } from '@emotion/react';
+
 import { HTMLAttributes } from 'react';
 
 import Button from '@/components/@common/Button/Button';
 import Text from '@/components/@common/Text/Text';
-import { reviewStatusWrapperStyle } from '@/components/home/common/homeReservationCard/HomeReservationCard.style';
 
 import Write from '@/assets/svgs/home/home_btn_write.svg?react';
 
+import { Theme } from '@/styles/theme';
+
 interface HomeReservationCardReviewProps extends HTMLAttributes<HTMLDivElement> {
   review?: boolean;
+  onReview?: () => void;
 }
 
-const HomeReservationCardReview = ({ review = false }: HomeReservationCardReviewProps) => {
+const HomeReservationCardReview = ({
+  review = false,
+  onReview,
+}: HomeReservationCardReviewProps) => {
   return (
-    <div css={reviewStatusWrapperStyle(review)}>
-      <Button variant="review">
-        <Write />
-        리뷰 쓰기
-      </Button>
-      <Text size="small">
-        리뷰 작성 기한이 <span>29일</span> 남았어요 !
-      </Text>
-    </div>
+    review && (
+      <>
+        <Button onClick={onReview} variant="review">
+          <Write />
+          리뷰 쓰기
+        </Button>
+        <Text css={reviewStatusText} size="small">
+          리뷰 작성 기한이 <span>29일</span> 남았어요 !
+        </Text>
+      </>
+    )
   );
 };
 
 export default HomeReservationCardReview;
+
+const reviewStatusText = css({
+  textAlign: 'center',
+  color: Theme.color.naverBlue,
+  marginTop: '6px',
+});

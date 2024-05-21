@@ -1,4 +1,5 @@
 import { HTMLAttributes } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { iconStyle } from '@/components/home/common/homeReservationCard/HomeReservationCard.style';
 import HomeReservationCardDetail from '@/components/home/common/homeReservationCard/HomeReservationCardDetail';
@@ -13,18 +14,20 @@ import StarOff from '@/assets/svgs/home/home_ic_star_off.svg?react';
 import StarOn from '@/assets/svgs/home/home_ic_star_on.svg?react';
 
 interface HomeReservationCardProps extends HTMLAttributes<HTMLDivElement> {
+  reservationId: number;
   storeName: string;
   category: string;
   reservationDate: string;
   label: string; // 2번째, 7개월 만의 예약 !
   mainDescription: string;
   subDescription: string;
-  price: string;
+  price: number;
   review?: boolean;
   starMark?: boolean;
 }
 
 const HomeReservationCard = ({
+  reservationId,
   storeName,
   category,
   reservationDate,
@@ -35,7 +38,14 @@ const HomeReservationCard = ({
   review = false,
   starMark = false,
 }: HomeReservationCardProps) => {
+  const navigate = useNavigate();
   const Icon = getCategoryIcon(category, true);
+
+  const handleReviewClick = () => {
+    navigate(`keyword/${reservationId}`);
+
+    console.log('click');
+  };
 
   return (
     <li>
@@ -56,7 +66,7 @@ const HomeReservationCard = ({
           subDescription={subDescription}
           price={price}
         />
-        <HomeReservationCardReview review={review} />
+        <HomeReservationCardReview review={review} onReview={handleReviewClick} />
       </HomeReservationCardDetail>
     </li>
   );
