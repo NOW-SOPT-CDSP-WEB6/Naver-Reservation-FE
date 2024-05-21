@@ -1,16 +1,25 @@
-import ContentBox from "@/components/@common/ContentBox/ContentBox";
-import ReviewIcon from "@/assets/svgs/review/home_ic_pen.svg?react"
-import Vector from "@/assets/svgs/review/Vector_8.svg?react"
-import { caption, cntWrapper, detail, title, wrapper, writing } from "@/pages/reviewPage/ReviewWriting/ReviewWriting.style";
-import { REVIEW_PLACE_HOLDER, REVIEW_CHAR_MAXIMUM } from "@/constants";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 
-interface ReviewWritingProps {
+import {
+  caption,
+  cntWrapper,
+  detail,
+  title,
+  wrapper,
+  writing,
+} from '@/pages/reviewPage/ReviewWriting/ReviewWriting.style';
 
-};
+import ContentBox from '@/components/@common/ContentBox/ContentBox';
 
-const ReviewWriting = ({ }: ReviewWritingProps) => {
-  const [text, setText] = useState("");
+import Vector from '@/assets/svgs/review/Vector_8.svg?react';
+import ReviewIcon from '@/assets/svgs/review/home_ic_pen.svg?react';
+
+import { REVIEW_CHAR_MAXIMUM, REVIEW_PLACE_HOLDER } from '@/constants';
+
+interface ReviewWritingProps {}
+
+const ReviewWriting = ({}: ReviewWritingProps) => {
+  const [text, setText] = useState('');
   const [isFocus, setIsFocus] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -18,7 +27,7 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
     if (isFocus && textareaRef.current) {
       textareaRef.current.focus();
     }
-  }, [isFocus])
+  }, [isFocus]);
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     if (e.target.value.length <= REVIEW_CHAR_MAXIMUM) {
@@ -29,7 +38,7 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
   return (
     <>
       <ContentBox
-        variant='round2'
+        variant="round2"
         styles={{
           height: '151px',
           marginTop: '11px',
@@ -56,10 +65,9 @@ const ReviewWriting = ({ }: ReviewWritingProps) => {
       </ContentBox>
       <div css={caption}>
         <p>리뷰 작성 유의사항</p>
-        <Vector width="90px" strokeWidth="1px"/>
+        <Vector width="90px" strokeWidth="1px" />
       </div>
     </>
-
   );
 };
 
@@ -70,10 +78,8 @@ const PlaceHolder = () => {
         <ReviewIcon />
         리뷰를 작성해주세요
       </div>
-      <div css={detail}>
-        {REVIEW_PLACE_HOLDER}
-      </div>
+      <div css={detail}>{REVIEW_PLACE_HOLDER}</div>
     </>
-  )
-}
+  );
+};
 export default ReviewWriting;

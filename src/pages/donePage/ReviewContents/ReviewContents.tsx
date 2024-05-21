@@ -2,17 +2,13 @@ import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
 import {
   AlignCenter,
   ReviewDetail,
-  ReviewImg,
   ReviewText,
+  TextColor,
 } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ImageStyle, TextColor } from '@/pages/donePage/ReviewContents/ReviewContents.style';
 
 import Badge from '@/components/@common/Badge/Badge';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
-
-import ProfImg from '@/assets/svgs/done/prof_img.svg?react';
-import DetailImg from '@/assets/svgs/done/review_img.svg?react';
 
 import { Theme } from '@/styles/theme';
 
@@ -32,7 +28,7 @@ const ReviewContents = () => {
         }}
       >
         <section css={ReviewDetail}>
-          <ProfImg css={ImageStyle}></ProfImg>
+          {/* <ProfImg css={ImageStyle}></ProfImg> */}
           <div>
             <Text size={'medium'}>하윙</Text>
             <Text size={'small'} css={TextColor}>
@@ -45,7 +41,7 @@ const ReviewContents = () => {
             <Text size={'medium'} css={ReviewText}>
               <p>좋아요굿이에요좋아요굿이요좋아요굿이요좋아요</p>
             </Text>
-            <DetailImg css={ReviewImg}></DetailImg>
+            {/* <DetailImg css={ReviewImg}></DetailImg> */}
           </div>
         </section>
 
