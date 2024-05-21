@@ -15,6 +15,8 @@ export const btnStyle = css({
 
   borderRadius: '8px',
   borderWidth: '0',
+
+  cursor: 'pointer',
 });
 
 export const btnVariant = {
