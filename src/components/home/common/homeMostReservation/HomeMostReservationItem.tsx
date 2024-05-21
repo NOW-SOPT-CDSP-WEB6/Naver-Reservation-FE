@@ -25,10 +25,10 @@ export const HomeMostReservationItem = ({
   return (
     <li css={itemStyle}>
       <div css={rankNumberStyle}>{rank}</div>
-      <p css={mainTextStyle}>
+      <div css={mainTextStyle}>
         <NaverCalendar />
         <Text size="medium">{children}</Text>
-      </p>
+      </div>
       <Text size="medium">{currentCount}회</Text>
       <progress css={statusbarStyle} max={maxCount} value={currentCount} />
     </li>

@@ -25,6 +25,7 @@ const HomeReservationDetail = ({
         <HomeCategoryChips>
           {CHIPS?.map((chip) => (
             <HomeCategoryChips.Item
+              key={chip}
               status={chip}
               isSelected={selectedChip === chip}
               onClick={() => onChipSelect?.(chip)}

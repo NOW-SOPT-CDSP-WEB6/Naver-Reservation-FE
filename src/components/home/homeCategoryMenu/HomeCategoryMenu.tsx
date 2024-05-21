@@ -15,6 +15,7 @@ const HomeCategoryMenu = ({ selectedMenu, onSelect }: HomeCategoryMenuProps) => 
     <section css={containerStyle}>
       {Object.keys(CATEGORY).map((category) => (
         <HomeCategoryBtn
+          key={category}
           onClick={() => onSelect?.(category)}
           category={category}
           isSelected={category === selectedMenu}
