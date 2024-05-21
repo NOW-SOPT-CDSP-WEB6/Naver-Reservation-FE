@@ -60,11 +60,16 @@ export const detailStyle = css({
   padding: '20px 0px',
 
   '& > p:last-child': {
+    width: '60%',
     color: Theme.color.darkgray,
   },
 
   '& > p:nth-child(1)': {
     color: Theme.color.mediumGray,
+  },
+
+  '& > p:nth-child(2)': {
+    width: '75%',
   },
 });
 
