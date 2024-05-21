@@ -22,7 +22,7 @@ const CarouselCard = ({ badgeTitle, isFullBadge, setIsFullBadge }: CarouselCardP
           return (<Badge>{badge.title}</Badge>)
         })
       }
-      <div css={[s.fullBtn, s.customBtn[+isFullBadge]]}>
+      <div css={[s.fullBtn, s.customBtn(isFullBadge)]}>
         {
           isFullBadge
             ? <OnFull width="38px" height="38px" onClick={() => setIsFullBadge(false)} cursor="pointer" />
