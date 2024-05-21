@@ -34,4 +34,4 @@ const SlideWrapper = css({
   },
 });
 
-export { mediumTextColor, RateWrapper, TextSpace, StarIcon, SlideWrapper };
+export { RateWrapper, SlideWrapper, StarIcon, TextSpace, mediumTextColor };

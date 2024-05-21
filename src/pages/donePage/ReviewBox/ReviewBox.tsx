@@ -14,8 +14,6 @@ import Title from '@/components/@common/Title/Title';
 
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
 
-import { Theme } from '@/styles/theme';
-
 const ReviewList = () => {
   return (
     <ContentBox

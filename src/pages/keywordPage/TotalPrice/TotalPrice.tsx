@@ -1,25 +1,26 @@
-import ContentBox from "@/components/@common/ContentBox/ContentBox";
-import * as s from "@/pages/keywordPage/TotalPrice/TotalPrice.style"
+import * as s from '@/pages/keywordPage/TotalPrice/TotalPrice.style';
 
-interface TotalAccountProps { }
+import ContentBox from '@/components/@common/ContentBox/ContentBox';
 
-const TotalPrice = ({ }: TotalAccountProps) => {
+interface TotalAccountProps {}
+
+const TotalPrice = ({}: TotalAccountProps) => {
   return (
     <ContentBox
-      variant='round'
+      variant="round"
       styles={{
         height: '114px',
       }}
     >
       <section css={s.wrapper}>
         <div css={s.detail}>
-            <span>지나 수석 디자이너</span>
-            <span>33,000원</span>
+          <span>지나 수석 디자이너</span>
+          <span>33,000원</span>
         </div>
-        <hr css={s.vector}/>
+        <hr css={s.vector} />
         <div css={s.total}>
-            <span>총 금액</span>
-            <span>33,000원</span>
+          <span>총 금액</span>
+          <span>33,000원</span>
         </div>
       </section>
     </ContentBox>

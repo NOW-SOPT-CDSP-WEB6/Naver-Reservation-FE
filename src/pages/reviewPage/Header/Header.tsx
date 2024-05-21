@@ -1,5 +1,14 @@
-import Badge from "@/components/@common/Badge/Badge";
-import { badgeWrapper, detailIcon, detailList, headerTitle, headerWrapper, mainDetail, subDetail } from "@/pages/reviewPage/Header/Header.style";
+import {
+  badgeWrapper,
+  detailIcon,
+  detailList,
+  headerTitle,
+  headerWrapper,
+  mainDetail,
+  subDetail,
+} from '@/pages/reviewPage/Header/Header.style';
+
+import Badge from '@/components/@common/Badge/Badge';
 
 const Header = () => {
   return (
@@ -31,9 +40,9 @@ const Header = () => {
         </li>
       </ul>
       <div css={badgeWrapper}>
-        <Badge size="small" >💓 친절해요</Badge>
-        <Badge size="small" >💇🏻‍♀️ 스타일 추천을 잘해줘요</Badge>
-        <Badge size="small" >+2</Badge>
+        <Badge size="small">💓 친절해요</Badge>
+        <Badge size="small">💇🏻‍♀️ 스타일 추천을 잘해줘요</Badge>
+        <Badge size="small">+2</Badge>
       </div>
     </section>
   );
