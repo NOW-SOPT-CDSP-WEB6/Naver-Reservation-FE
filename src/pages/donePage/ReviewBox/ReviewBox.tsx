@@ -1,6 +1,10 @@
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
 import PlaceList from '@/pages/donePage/Place/Place';
 import MoreReview from '@/pages/donePage/ReviewBox/MoreReviewBox';
+import { DetailTitle } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
+import { DetailDate } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
+import { DoneBtnStyle } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
+import { Wrapper } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
 import {
   AlignRow,
   ButtonStyle,
@@ -22,6 +26,7 @@ import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';
 
+import DoneBtn from '@/assets/svgs/done/done_btn_x.svg?react';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
 import MemoIcon from '@/assets/svgs/done/memo.svg?react';
 import NextBtn from '@/assets/svgs/done/review_ic_next.svg?react';
@@ -90,7 +95,21 @@ const ReviewList = () => {
             이어서 <span css={blueHighlight}>리뷰</span> 더 써볼까요?
           </span>
         </Title>
-        <MoreReview></MoreReview>
+
+        <section css={Wrapper}>
+          <MoreReview>
+            <Text size="medium" css={DetailTitle}>
+              방문한 다른 장소가 있나요?
+            </Text>
+          </MoreReview>
+          <MoreReview>
+            <DoneBtn css={DoneBtnStyle} width={22} height={22} />
+            <Text size="medium" css={DetailTitle}>
+              르메인호텔 협재
+            </Text>
+            <p css={DetailDate}>5일 전 방문</p>
+          </MoreReview>
+        </section>
       </ContentBox>
       <ContentBox
         variant="round"

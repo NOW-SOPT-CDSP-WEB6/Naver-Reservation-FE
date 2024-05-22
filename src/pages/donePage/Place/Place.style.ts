@@ -15,25 +15,25 @@ export const FavIconStyle = css({
 export const PlaceStyle = css({
   width: '148px',
   height: '186px',
-  borderRadius: '18px',
+  marginTop: '15px',
   marginBottom: '10px',
+  borderRadius: '18px',
   backgroundImage: `url(${Img})`,
   objectFit: 'contain',
-  marginTop: '15px',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
 });
 
 export const Address = css({
-  color: Theme.color.white,
   paddingTop: '140px',
   paddingLeft: '15px',
+  color: Theme.color.white,
 });
 
 export const Name = css({
-  color: Theme.color.white,
   paddingLeft: '15px',
   paddingTop: '3px',
+  color: Theme.color.white,
 });
 
 export const CafeText = css({

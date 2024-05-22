@@ -37,7 +37,7 @@ const DetailDate = css({
 const DoneBtnStyle = css({
   position: 'absolute',
   top: '968px',
-  right: '270px',
+  right: '260px',
 });
 
 export { WriteReview, Wrapper, DetailTitle, DetailDate, DoneBtnStyle };
