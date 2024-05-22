@@ -11,12 +11,19 @@ import HomeCategoryMenu from '@/components/home/homeCategoryMenu/HomeCategoryMen
 import HomeMenuBar from '@/components/home/homeMenuBar/HomeMenuBar';
 import HomeReservationDetail from '@/components/home/homeReservationDetail/HomeReservationDetail';
 
-import { useAllReservation } from '@/hooks/home/useAllReservation';
+import { useReservationInfoQuery } from '@/hooks/reservation/useReservationInfoQuery';
+import { useReservationMarkMutation } from '@/hooks/reservation/useReservationMarkMutation';
+import { useReservationQuery } from '@/hooks/reservation/useReservationQuery';
 
 const HomePage = () => {
   const [selectedMenu, setSelectedMenu] = useState('전체');
   const [currentChip, setCurrentChip] = useState('방문 완료');
-  const data = useAllReservation();
+
+  const reservationData = useReservationQuery(selectedMenu);
+  const reservationInfo = useReservationInfoQuery(selectedMenu);
+  const { mutate: onMark } = useReservationMarkMutation();
+
+  console.log(reservationData);
 
   const handleSelect = (item: string) => {
     setSelectedMenu(item);
@@ -35,7 +42,10 @@ const HomePage = () => {
         <HomeCategoryMenu selectedMenu={selectedMenu} onSelect={handleSelect} />
 
         <section css={myInfoContainerStyle}>
-          <HomeMyInfo totalCount={3} totalExpense={33000} />
+          <HomeMyInfo
+            totalCount={reservationInfo?.count}
+            totalExpense={reservationInfo?.totalPrice}
+          />
 
           <HomeMostReservation>
             <HomeMostReservation.item rank={1} maxCount={2} currentCount={2}>
@@ -49,7 +59,7 @@ const HomePage = () => {
       </ContentBox>
 
       <HomeReservationDetail selectedChip={currentChip} onChipSelect={handleChipSelect}>
-        {data?.map((item) => (
+        {reservationData?.map((item) => (
           <HomeReservationCard
             key={item.reservationId}
             reservationId={item.reservationId}
@@ -60,8 +70,9 @@ const HomePage = () => {
             price={item.price}
             review={item.review}
             starMark={item.starMark}
-            category={'뷰티'}
+            category={item.category}
             label="2번째, 7개월만의 예약"
+            onMark={onMark}
           />
         ))}
       </HomeReservationDetail>

@@ -24,6 +24,7 @@ interface HomeReservationCardProps extends HTMLAttributes<HTMLDivElement> {
   price: number;
   review?: boolean;
   starMark?: boolean;
+  onMark: (id: number) => void;
 }
 
 const HomeReservationCard = ({
@@ -37,6 +38,7 @@ const HomeReservationCard = ({
   price,
   review = false,
   starMark = false,
+  onMark,
 }: HomeReservationCardProps) => {
   const navigate = useNavigate();
   const Icon = getCategoryIcon(category, true);
@@ -55,7 +57,11 @@ const HomeReservationCard = ({
         icon={<Icon css={iconStyle} />}
         starTrigger={
           <>
-            {starMark ? <StarOn /> : <StarOff />}
+            {starMark ? (
+              <StarOn onClick={() => onMark(reservationId)} />
+            ) : (
+              <StarOff onClick={() => onMark(reservationId)} />
+            )}
             <Edit />
           </>
         }
