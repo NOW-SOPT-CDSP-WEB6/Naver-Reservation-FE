@@ -1,4 +1,5 @@
-import axiosInstance from '@/api/axiosInstance';
+import { axiosInstance } from '@/api/axiosInstance';
+
 import { RESERVATIONS_ALL_URL } from '@/constants/api';
 
 export const getAllReservation = async () => {
