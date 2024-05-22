@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const serverAxios = axios.create({
+const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_SERVER_URL,
   headers: {
     memberId: 1,
   },
 });
 
-export default serverAxios;
+export default axiosInstance;
