@@ -12,3 +12,8 @@ export interface ReservationItemType {
   review: boolean;
   starMark: boolean;
 }
+
+export interface ReservationInfo {
+  totalPrice: number;
+  count: number;
+}
