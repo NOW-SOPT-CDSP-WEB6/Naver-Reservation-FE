@@ -3,8 +3,6 @@ import { css } from '@emotion/react';
 import { Theme } from '@/styles/theme';
 
 export const ImageStyle = css({
-  width: '40px',
-  height: '40px',
   borderRadius: '50%',
   marginRight: '12px',
   marginLeft: '0px',
@@ -23,7 +21,13 @@ export const ReviewDetail = css({
 
   marginBottom: '10px',
 });
+
 export const AlignCenter = css({
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+export const AlignRow = css({
   display: 'flex',
   flexDirection: 'row',
 });
@@ -38,6 +42,7 @@ export const ReviewImg = css({
   height: '48px',
   marginLeft: '22px',
   marginBottom: '12px',
+  borderRadius: '6px',
 });
 
 export const BadgeAlign = css({

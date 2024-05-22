@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { Theme } from '@/styles/theme';
+
 export const ExitBtnStyle = css({
   display: 'flex',
   justifyContent: 'center',
@@ -18,4 +20,5 @@ export const Wrapper = css({
   justifyContent: 'flex-end',
   alignItems: 'center',
   flexShrink: '0',
+  // background: 'linear-gradient(180deg, #287CFF -66.77%, #F0F0F3 13.28%, #F0F0F3 100%)',
 });
