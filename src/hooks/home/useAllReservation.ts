@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { getAllReservation } from '@/api/home';
+import { getAllReservation } from '@/api/getAllReservation';
 
 import { ReservationItemType } from '@/type/reservation';
 
