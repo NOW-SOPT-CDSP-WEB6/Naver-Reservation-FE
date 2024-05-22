@@ -8,6 +8,9 @@ interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   const [meetCnt, setMeetCnt] = useState(2);
+
+  console.log(setMeetCnt)
+
   return (
     <section css={s.Wrapper}>
       <img src={headerSrc} />
