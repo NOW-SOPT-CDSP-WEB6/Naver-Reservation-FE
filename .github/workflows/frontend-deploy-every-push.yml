@@ -1,0 +1,40 @@
+name: FRONTEND-DEPLOY-EVERY-PUSH
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  sync:
+    name: Sync forked repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FRONTEND_AUTO_SYNC }}
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21.4.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build
+
+      - name: Add remote URL
+        run: |
+          git remote add forked_repo https://wuzoo:${{ secrets.FRONTEND_AUTO_SYNC }}@github.com/wuzoo/Naver-Reservation-FE
+          git config user.name wuzoo
+          git config user.email wndyd9911@gmail.com
+
+      - name: Push Changes to forked_repo
+        run: |
+          git push -f forked_repo main
+
+      - name: Clean up
+        run: |
+          git remote remove forked_repo

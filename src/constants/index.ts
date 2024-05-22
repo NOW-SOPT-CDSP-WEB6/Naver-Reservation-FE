@@ -1,4 +1,4 @@
-export const CATEGORY = {
+export const CATEGORY: { [key: string]: string } = {
   전체: 'all',
   뷰티: 'beauty',
   '생활/클래스': 'life_class',
