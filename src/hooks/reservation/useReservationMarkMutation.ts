@@ -2,7 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 
 import { queryClient } from '@/hooks/queryClient';
 
-import { postReservationMark } from '@/api/home';
+import { postReservationMark } from '@/api';
 
 export const useReservationMarkMutation = () => {
   const { mutate } = useMutation({
