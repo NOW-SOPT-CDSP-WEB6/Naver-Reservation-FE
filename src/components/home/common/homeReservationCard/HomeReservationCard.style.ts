@@ -93,23 +93,6 @@ export const detailContainerStyle = css({
   padding: '12px 26px',
 });
 
-export const detailHeaderStyle = css({
-  display: 'flex',
-  justifyContent: 'space-between',
-
-  padding: '24px 0px',
-
-  '& > p:first-child': {
-    fontSize: '20px',
-  },
-
-  '& > p:last-child': {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4px',
-  },
-});
-
 export const listStyle = css({
   display: 'flex',
   flexDirection: 'column',

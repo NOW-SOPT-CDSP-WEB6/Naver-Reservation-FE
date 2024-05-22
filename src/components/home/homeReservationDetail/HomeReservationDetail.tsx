@@ -1,9 +1,12 @@
 import { css } from '@emotion/react';
 
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
 
+import Text from '@/components/@common/Text/Text';
 import HomeCategoryChips from '@/components/home/common/homeCategoryChip/HomeCategoryChips';
 import HomeReservationCardList from '@/components/home/common/homeReservationCard/HomeReservationCardList';
+
+import UpArrow from '@/assets/svgs/home/home_ic_up.svg?react';
 
 import { CHIPS } from '@/constants';
 
@@ -19,6 +22,8 @@ const HomeReservationDetail = ({
   onChipSelect,
   children,
 }: HomeReservationDetailProps) => {
+  const cards = children as ReactElement[];
+
   return (
     <section css={containerStyle}>
       <div>
@@ -33,6 +38,13 @@ const HomeReservationDetail = ({
           ))}
         </HomeCategoryChips>
       </div>
+      <header css={detailHeaderStyle}>
+        <Text>총 {cards?.length}건</Text>
+        <Text size="medium">
+          방문일자
+          <UpArrow />
+        </Text>
+      </header>
       <HomeReservationCardList>{children}</HomeReservationCardList>
     </section>
   );
@@ -42,4 +54,21 @@ export default HomeReservationDetail;
 
 const containerStyle = css({
   padding: '36px 20px',
+});
+
+export const detailHeaderStyle = css({
+  display: 'flex',
+  justifyContent: 'space-between',
+
+  padding: '24px 0px',
+
+  '& > p:first-child': {
+    fontSize: '20px',
+  },
+
+  '& > p:last-child': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  },
 });
