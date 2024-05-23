@@ -1,30 +1,17 @@
-import { useParams } from 'react-router-dom';
-
-import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
-import {
-  AlignCenter,
-  AlignRow,
-  ReviewDetail,
-  ReviewText,
-  TextColor,
-} from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ImageStyle } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewImg } from '@/pages/donePage/ReviewContents/ReviewContents.style';
+import { HTMLAttributes } from 'react';
 
 import Badge from '@/components/@common/Badge/Badge';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
-import Text from '@/components/@common/Text/Text';
-
-import { useReviewsInfoQuery } from '@/hooks/reservation/useReviewsInfo';
-
-import DoneImg from '@/assets/svgs/done/done_img.svg?react';
 
 import { Theme } from '@/styles/theme';
 
-const ReviewContents = () => {
-  const { reservationId } = useParams();
-  const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
-  console.log('데이터 : ', ReviewInfo);
+interface ReviewContentsProps extends HTMLAttributes<HTMLAllCollection> {
+  children: React.ReactNode;
+}
+
+const ReviewContents = (props: ReviewContentsProps) => {
+  const { children } = props;
+
   return (
     <>
       <ContentBox
@@ -39,24 +26,7 @@ const ReviewContents = () => {
           backgroundColor: Theme.color.white,
         }}
       >
-        <section css={ReviewDetail}>
-          <DoneImg css={ImageStyle} width={40} height={40}></DoneImg>
-          <div css={AlignCenter}>
-            <Text size={'medium'}>{ReviewInfo?.data.userReviewList.map((item) => item.name)}</Text>
-            <Text size={'small'} css={TextColor}>
-              {ReviewInfo?.data.userReviewList.map((item) => item.reviewDate)}
-            </Text>
-          </div>
-        </section>
-        <section css={SlideWrapper}>
-          <div css={AlignRow}>
-            <Text size={'medium'} css={ReviewText}>
-              <p>{ReviewInfo?.data.userReviewList.map((item) => item.content)}</p>
-            </Text>
-            <DoneImg width={48} height={48} css={ReviewImg}></DoneImg>
-          </div>
-        </section>
-
+        {children}
         <Badge size="small">
           <span>친절해요💓</span>
         </Badge>

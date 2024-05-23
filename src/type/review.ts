@@ -6,6 +6,7 @@ export interface ReviewInfoType {
 }
 
 export interface ReviewInfoItemType {
+  reviewId: number;
   content: string;
   name: string;
   reviewDate: string;
