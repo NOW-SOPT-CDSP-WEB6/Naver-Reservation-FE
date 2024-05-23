@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import Carousel from '@/pages/keywordPage/Carousel/Carousel';
 import Header from '@/pages/keywordPage/Header/Header';
@@ -10,8 +10,16 @@ import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
 const KeywordPage = () => {
   const { reservationId } = useParams();
   const navigate = useNavigate();
+
+  const { state } = useLocation();
+  const { category, mainDescription, price, reservationDate, storeName } = state;
+
+  console.log(category, mainDescription, price, reservationDate, storeName);
+
   const handleNextClick = () => {
-    navigate(`/review/${reservationId}`);
+    navigate(`/review/${reservationId}`, {
+      state,
+    });
   };
   return (
     <>
