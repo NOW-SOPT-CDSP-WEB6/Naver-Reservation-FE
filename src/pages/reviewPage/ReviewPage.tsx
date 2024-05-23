@@ -6,6 +6,7 @@ import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
 import { useReviewWritingMutation } from '@/hooks/query/useReviewWritingMutation';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
+import Stepper from '@/components/@common/Stepper/Stepper';
 
 const ReviewPage = () => {
   const { mutate, status } = useReviewWritingMutation();

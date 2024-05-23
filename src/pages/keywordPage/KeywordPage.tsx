@@ -6,6 +6,7 @@ import LikeBox from '@/pages/keywordPage/LikeBox/LikeBox';
 import TotalPrice from '@/pages/keywordPage/TotalPrice/TotalPrice';
 
 import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
+import Stepper from '@/components/@common/Stepper/Stepper';
 
 const KeywordPage = () => {
   const { reservationId } = useParams();
@@ -15,6 +16,7 @@ const KeywordPage = () => {
   };
   return (
     <>
+      <Stepper />
       <Header />
       <TotalPrice />
       <Carousel />
