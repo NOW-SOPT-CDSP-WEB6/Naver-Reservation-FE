@@ -17,3 +17,8 @@ export interface ReservationInfo {
   totalPrice: number;
   count: number;
 }
+
+export interface ReviewAPIType {
+  reservationId: number;
+  writing: string;
+}
