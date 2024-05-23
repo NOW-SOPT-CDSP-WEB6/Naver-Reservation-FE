@@ -44,7 +44,15 @@ const HomeReservationCard = ({
   const Icon = getCategoryIcon(category, true);
 
   const handleReviewClick = () => {
-    navigate(`keyword/${reservationId}`);
+    navigate(`keyword/${reservationId}`, {
+      state: {
+        storeName,
+        category,
+        reservationDate,
+        mainDescription,
+        price,
+      },
+    });
   };
 
   return (

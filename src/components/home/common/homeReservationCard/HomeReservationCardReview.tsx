@@ -19,7 +19,7 @@ const HomeReservationCardReview = ({
   onReview,
 }: HomeReservationCardReviewProps) => {
   return (
-    review && (
+    !review && (
       <>
         <Button onClick={onReview} variant="review">
           <Write />
