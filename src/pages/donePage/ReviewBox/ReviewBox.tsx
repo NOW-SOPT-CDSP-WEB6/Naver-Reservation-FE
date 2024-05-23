@@ -21,7 +21,6 @@ import {
 import ReviewContents from '@/pages/donePage/ReviewContents/ReviewContents';
 
 import Button from '@/components/@common/Button/Button';
-import { btnSize, btnStyle, btnVariant } from '@/components/@common/Button/Button.style';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';

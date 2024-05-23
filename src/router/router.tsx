@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <ReviewPage />,
       },
       {
-        path: 'done',
+        path: 'done/:reservationId',
         element: <DonePage />,
       },
     ],

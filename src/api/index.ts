@@ -23,3 +23,9 @@ export const postReservationMark = async (reservationId: number) => {
 
   return data;
 };
+
+export const getReview = async (storeId: number) => {
+  const { data } = await axiosInstance.get(`${END_POINTS.RESERVATION_REVIEW}/${storeId}`);
+
+  return data;
+};
