@@ -8,6 +8,7 @@ import ReviewWriting from '@/pages/reviewPage/ReviewWriting/ReviewWriting';
 import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
 
 import { useReviewWritingMutation } from '@/hooks/query/useReviewWritingMutation';
+import Stepper from '@/components/@common/Stepper/Stepper';
 
 const ReviewPage = () => {
   const { mutate, status } = useReviewWritingMutation();
