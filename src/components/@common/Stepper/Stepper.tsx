@@ -16,7 +16,6 @@ const Stepper = ({ }: StepperProps) => {
   const reviewActive = curStep === '/review' || curStep === '/done';
   const doneActive = curStep === '/done';
 
-  console.log({ curStep, keywordActive, reviewActive, doneActive })
   return (
     <>
       <section css={s.stepperWrapper}>

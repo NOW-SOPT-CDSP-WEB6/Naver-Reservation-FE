@@ -23,6 +23,7 @@ const ReviewPage = () => {
   console.log(category, mainDescription, price, reservationDate, storeName);
 
   const handleNextClick = () => {
+    console.log("클릭했다");
     mutate({ reservationId: +reservationId, writing: text });
 
     if (status === 'success') {

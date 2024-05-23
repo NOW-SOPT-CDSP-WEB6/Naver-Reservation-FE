@@ -1,4 +1,3 @@
-import { Children } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
@@ -36,7 +35,7 @@ import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';
 
-import { useReviewsInfoQuery } from '@/hooks/reservation/useReviewsInfo';
+import { useReviewsInfoQuery } from '@/hooks/query/useReviewsInfo';
 
 import DoneBtn from '@/assets/svgs/done/done_btn_x.svg?react';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
@@ -48,7 +47,6 @@ const ReviewList = () => {
   const { reservationId } = useParams();
 
   const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
-  console.log('데이터 : ', ReviewInfo);
 
   return (
     <>
