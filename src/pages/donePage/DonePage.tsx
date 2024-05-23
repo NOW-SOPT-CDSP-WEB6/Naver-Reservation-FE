@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { useParams } from 'react-router-dom';
+
 import DoneHeader from '@/pages/donePage/DoneHeader/DoneHeader';
 import ReviewList from '@/pages/donePage/ReviewBox/ReviewBox';
 import TopBar from '@/pages/donePage/TopBar/TopBar';
