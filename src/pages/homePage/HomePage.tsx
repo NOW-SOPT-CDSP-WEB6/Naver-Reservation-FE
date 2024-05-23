@@ -11,9 +11,9 @@ import HomeCategoryMenu from '@/components/home/homeCategoryMenu/HomeCategoryMen
 import HomeMenuBar from '@/components/home/homeMenuBar/HomeMenuBar';
 import HomeReservationDetail from '@/components/home/homeReservationDetail/HomeReservationDetail';
 
-import { useReservationInfoQuery } from '@/hooks/reservation/useReservationInfoQuery';
-import { useReservationMarkMutation } from '@/hooks/reservation/useReservationMarkMutation';
-import { useReservationQuery } from '@/hooks/reservation/useReservationQuery';
+import { useReservationInfoQuery } from '@/hooks/query/useReservationInfoQuery';
+// import { useReservationMarkMutation } from '@/hooks/query/useReservationMarkMutation';
+import { useReservationQuery } from '@/hooks/query/useReservationQuery';
 
 const HomePage = () => {
   const [selectedMenu, setSelectedMenu] = useState('전체');
@@ -21,7 +21,7 @@ const HomePage = () => {
 
   const reservationData = useReservationQuery(selectedMenu);
   const reservationInfo = useReservationInfoQuery(selectedMenu);
-  const { mutate: onMark } = useReservationMarkMutation();
+  // const { mutate: onMark } = useReservationMarkMutation();
 
   const handleSelect = (item: string) => {
     setSelectedMenu(item);
@@ -56,7 +56,7 @@ const HomePage = () => {
         </section>
       </ContentBox>
 
-      <HomeReservationDetail selectedChip={currentChip} onChipSelect={handleChipSelect}>
+      {/* <HomeReservationDetail selectedChip={currentChip} onChipSelect={handleChipSelect}>
         {reservationData?.map((item) => (
           <HomeReservationCard
             key={item.reservationId}
@@ -73,7 +73,7 @@ const HomePage = () => {
             onMark={onMark}
           />
         ))}
-      </HomeReservationDetail>
+      </HomeReservationDetail> */}
       <HomeFooter />
     </>
   );

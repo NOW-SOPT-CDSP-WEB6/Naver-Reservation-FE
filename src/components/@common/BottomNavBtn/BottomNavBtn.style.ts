@@ -15,6 +15,7 @@ export const BackBtn = css({
   alignItems: 'center',
 
   width: 'fit-content',
+  cursor: 'pointer',
 });
 
 export const NextBtn = css({
