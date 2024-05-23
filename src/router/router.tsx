@@ -17,15 +17,15 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'keyword',
+        path: 'keyword/:reservationId',
         element: <KeywordPage />,
       },
       {
-        path: 'review',
+        path: 'review/:reservationId',
         element: <ReviewPage />,
       },
       {
-        path: 'done',
+        path: 'done/:reservationId',
         element: <DonePage />,
       },
     ],

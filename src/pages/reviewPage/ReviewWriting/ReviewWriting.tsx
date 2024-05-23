@@ -16,10 +16,12 @@ import ReviewIcon from '@/assets/svgs/review/home_ic_pen.svg?react';
 
 import { REVIEW_CHAR_MAXIMUM, REVIEW_PLACE_HOLDER } from '@/constants';
 
-interface ReviewWritingProps {}
+interface ReviewWritingProps {
+  text: string;
+  setText: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const ReviewWriting = ({}: ReviewWritingProps) => {
-  const [text, setText] = useState('');
+const ReviewWriting = ({ text, setText }: ReviewWritingProps) => {
   const [isFocus, setIsFocus] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
