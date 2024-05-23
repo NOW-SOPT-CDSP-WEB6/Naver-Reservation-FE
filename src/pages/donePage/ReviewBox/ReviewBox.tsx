@@ -1,10 +1,12 @@
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
 import PlaceList from '@/pages/donePage/Place/Place';
 import MoreReview from '@/pages/donePage/ReviewBox/MoreReviewBox';
-import { DetailTitle } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
-import { DetailDate } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
-import { DoneBtnStyle } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
-import { Wrapper } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
+import {
+  DetailDate,
+  DetailTitle,
+  DoneBtnStyle,
+  Wrapper,
+} from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
 import {
   AlignRow,
   ButtonStyle,
@@ -21,7 +23,6 @@ import {
 import ReviewContents from '@/pages/donePage/ReviewContents/ReviewContents';
 
 import Button from '@/components/@common/Button/Button';
-import { btnSize, btnStyle, btnVariant } from '@/components/@common/Button/Button.style';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';

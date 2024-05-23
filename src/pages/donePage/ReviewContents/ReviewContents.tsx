@@ -2,7 +2,9 @@ import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
 import {
   AlignCenter,
   AlignRow,
+  ImageStyle,
   ReviewDetail,
+  ReviewImg,
   ReviewText,
   TextColor,
 } from '@/pages/donePage/ReviewContents/ReviewContents.style';

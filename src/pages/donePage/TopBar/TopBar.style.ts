@@ -1,7 +1,5 @@
 import { css } from '@emotion/react';
 
-import { Theme } from '@/styles/theme';
-
 export const ExitBtnStyle = css({
   display: 'flex',
   justifyContent: 'center',

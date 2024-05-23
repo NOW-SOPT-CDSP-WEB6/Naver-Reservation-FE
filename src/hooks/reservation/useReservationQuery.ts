@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { getAllReservation } from '@/api/home';
-
 import { ReservationItemType } from '@/type/reservation';
+
+import { getAllReservation } from '@/api';
 
 export const useReservationQuery = (category: string) => {
   const { data: ReservationData } = useQuery<ReservationItemType[]>({

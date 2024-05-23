@@ -5,15 +5,12 @@ import {
   FavIconStyle,
   Name,
   PlaceStyle,
+  Wrapper,
 } from '@/pages/donePage/Place/Place.style';
-import { Wrapper } from '@/pages/donePage/Place/Place.style';
 
-import Button from '@/components/@common/Button/Button';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
-import Title from '@/components/@common/Title/Title';
 
-import PlaceImg from '@/assets/svgs/done/done_img.svg?react';
 import FavIcon2 from '@/assets/svgs/done/fav2.svg?react';
 import FavIcon from '@/assets/svgs/done/fav.svg?react';
 

@@ -45,8 +45,6 @@ const HomeReservationCard = ({
 
   const handleReviewClick = () => {
     navigate(`keyword/${reservationId}`);
-
-    console.log('click');
   };
 
   return (
