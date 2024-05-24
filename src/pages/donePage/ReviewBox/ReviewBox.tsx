@@ -40,11 +40,14 @@ import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
 import MemoIcon from '@/assets/svgs/done/memo.svg?react';
 import NextBtn from '@/assets/svgs/done/review_ic_next.svg?react';
 
+import { DAY_IN_WEEKS } from '@/constants';
+
 const ReviewList = () => {
   const { reservationId } = useParams();
 
   const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
   const TotalReviewNumber = ReviewInfo?.data.totalReviewCount;
+
   console.log('데이터 : ', ReviewInfo);
 
   return (
@@ -74,27 +77,35 @@ const ReviewList = () => {
           </Text>
         </p>
         <div css={SlideWrapper}>
-          {ReviewInfo?.data.userReviewList.map((item) => (
-            <ReviewContents key={item.reviewId}>
-              <section css={ReviewDetail}>
-                <img css={ImageStyle} src={profImg}></img>
-                <div css={AlignCenter}>
-                  <Text size={'medium'}>{item?.name}</Text>
-                  <Text size={'small'} css={TextColor}>
-                    {item?.reviewDate}
-                  </Text>
-                </div>
-              </section>
-              <section css={SlideWrapper}>
-                <div css={AlignRow}>
-                  <Text size={'medium'} css={ReviewText}>
-                    {item?.content}
-                  </Text>
-                  <img src={reviewImg} width={48} height={48} css={ReviewImg}></img>
-                </div>
-              </section>
-            </ReviewContents>
-          ))}
+          {ReviewInfo?.data.userReviewList.map((item) => {
+            const reviewDate = new Date(item.reviewDate);
+            const getDay = reviewDate.getDay();
+            const getMonth = reviewDate.getMonth();
+            const getDate = item.reviewDate.slice(8, 10);
+            const day = DAY_IN_WEEKS[getDay];
+
+            return (
+              <ReviewContents key={item.reviewId}>
+                <section css={ReviewDetail}>
+                  <img css={ImageStyle} src={profImg}></img>
+                  <div css={AlignCenter}>
+                    <Text size={'medium'}>{item?.name}</Text>
+                    <Text size={'small'} css={TextColor}>
+                      {getMonth}.{getDate}.{day}•리뷰 {item.reviewId}
+                    </Text>
+                  </div>
+                </section>
+                <section css={SlideWrapper}>
+                  <div css={AlignRow}>
+                    <Text size={'medium'} css={ReviewText}>
+                      {item?.content}
+                    </Text>
+                    <img src={reviewImg} width={48} height={48} css={ReviewImg}></img>
+                  </div>
+                </section>
+              </ReviewContents>
+            );
+          })}
         </div>
       </ContentBox>
       <ContentBox

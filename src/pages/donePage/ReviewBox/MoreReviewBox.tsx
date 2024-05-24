@@ -1,6 +1,6 @@
 import DoneBtn from '@assets/svgs/done/done_btn_x.svg?react';
 
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, useState } from 'react';
 
 import {
   DoneBtnStyle,
@@ -18,14 +18,24 @@ interface ReviewProps extends HTMLAttributes<HTMLDivElement> {
 
 const MoreReview = (props: ReviewProps) => {
   const { children } = props;
+  const [close, setClose] = useState(true);
+
+  const closeBox = () => {
+    setClose(false);
+  };
+
   return (
-    <div css={boxStyle}>
-      <DoneBtn width={18} height={18} css={DoneBtnStyle} />
-      {children}
-      <Button variant={'review'} icon={<WriteBtn />} css={WriteReview}>
-        리뷰 쓰기
-      </Button>
-    </div>
+    <>
+      {close && (
+        <div css={boxStyle}>
+          <DoneBtn onClick={closeBox} width={18} height={18} css={DoneBtnStyle} />
+          {children}
+          <Button variant={'review'} icon={<WriteBtn />} css={WriteReview}>
+            리뷰 쓰기
+          </Button>
+        </div>
+      )}
+    </>
   );
 };
 
