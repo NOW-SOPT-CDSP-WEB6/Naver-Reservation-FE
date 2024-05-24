@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
-import Img from '@/assets/svgs/done/done_img.svg';
+import Img1 from '@/assets/img/done_img_1.png';
+import Img2 from '@/assets/img/done_img_2.png';
 
 import { Theme } from '@/styles/theme';
 
@@ -12,16 +13,40 @@ export const FavIconStyle = css({
   marginRight: '3px',
 });
 
-export const PlaceStyle = css({
+export const PlaceStyle1 = css({
   width: '148px',
   height: '186px',
   marginTop: '15px',
   marginBottom: '10px',
   borderRadius: '18px',
-  backgroundImage: `url(${Img})`,
   objectFit: 'contain',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  backgroundImage: `url(${Img1})`,
+});
+
+export const PlaceStyle2 = css({
+  width: '148px',
+  height: '186px',
+  marginTop: '15px',
+  marginBottom: '10px',
+  borderRadius: '18px',
+  objectFit: 'contain',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundImage: `url(${Img2})`,
+});
+
+export const PlaceStyle3 = css({
+  width: '148px',
+  height: '186px',
+  marginTop: '15px',
+  marginBottom: '10px',
+  borderRadius: '18px',
+  objectFit: 'contain',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundImage: `url(${Img1})`,
 });
 
 export const Address = css({

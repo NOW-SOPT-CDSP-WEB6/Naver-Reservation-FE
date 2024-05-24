@@ -7,6 +7,7 @@ export const ExitBtnStyle = css({
   height: '28px',
   padding: '7px',
   flexShrink: '0',
+  cursor: 'pointer',
 });
 
 export const Wrapper = css({

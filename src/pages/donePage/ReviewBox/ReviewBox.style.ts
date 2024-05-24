@@ -66,6 +66,7 @@ const TextBox = css({
 const ButtonStyle = css({
   paddingLeft: '15px',
   paddingRight: '15px',
+  paddingBottom: '4px',
 });
 
 export {
