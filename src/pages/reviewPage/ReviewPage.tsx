@@ -10,14 +10,13 @@ import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
 import { useReviewWritingMutation } from '@/hooks/query/useReviewWritingMutation';
 
 const ReviewPage = () => {
-  const { mutate, status } = useReviewWritingMutation();
+  const { mutate } = useReviewWritingMutation();
   const [text, setText] = useState('');
   const { reservationId = '' } = useParams();
   const navigate = useNavigate();
 
   const { state } = useLocation();
-  const { category, mainDescription, price, reservationDate, storeName } = state;
-
+  const { mainDescription, price, reservationDate, storeName } = state;
 
   const handleNextClick = () => {
     mutate({ reservationId: +reservationId, writing: text });
@@ -28,7 +27,12 @@ const ReviewPage = () => {
   };
   return (
     <>
-      <Header storeName={storeName} reservationDate={reservationDate} mainDescription={mainDescription} price={price} />
+      <Header
+        storeName={storeName}
+        reservationDate={reservationDate}
+        mainDescription={mainDescription}
+        price={price}
+      />
       <DragDrop />
       <ReviewWriting text={text} setText={setText} />
       <BottomNavBtn handleNextClick={handleNextClick} />

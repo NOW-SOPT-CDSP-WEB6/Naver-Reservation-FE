@@ -1,6 +1,7 @@
 import * as s from '@/pages/keywordPage/TotalPrice/TotalPrice.style';
 
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
+
 import { addCommasToNumber } from '@/utils/price';
 
 interface TotalAccountProps {
@@ -8,7 +9,7 @@ interface TotalAccountProps {
   price: number;
 }
 
-const TotalPrice = ({mainDescription, price}: TotalAccountProps) => {
+const TotalPrice = ({ mainDescription, price }: TotalAccountProps) => {
   return (
     <ContentBox
       variant="round"

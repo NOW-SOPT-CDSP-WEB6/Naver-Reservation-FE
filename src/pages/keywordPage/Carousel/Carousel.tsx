@@ -13,7 +13,7 @@ interface CarouselProps {
   category: string;
 }
 
-const Carousel = ({category = '뷰티'}: CarouselProps) => {
+const Carousel = ({ category = '뷰티' }: CarouselProps) => {
   const [isFullBadge, setIsFullBadge] = useState<boolean>(false);
 
   return (
@@ -32,7 +32,7 @@ const Carousel = ({category = '뷰티'}: CarouselProps) => {
         이 가게에 어울리는 키워드를 골라주세요.(1개~5개)
       </Text>
       <section css={s.carouselWrapper}>
-        {BADGE_CATEGORY[category].map((badge) => {
+        {BADGE_CATEGORY[category]?.map((badge) => {
           return (
             <CarouselCard
               badgeTitle={badge}

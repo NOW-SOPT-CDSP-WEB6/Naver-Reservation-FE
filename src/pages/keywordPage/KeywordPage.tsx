@@ -13,7 +13,7 @@ const KeywordPage = () => {
   const navigate = useNavigate();
 
   const { state } = useLocation();
-  const { category, mainDescription, price, reservationDate, storeName } = state;
+  const { category, mainDescription, price, storeName } = state;
 
   const handleNextClick = () => {
     navigate(`/review/${reservationId}`, {
@@ -23,9 +23,9 @@ const KeywordPage = () => {
   return (
     <>
       <Stepper />
-      <Header storeName={storeName}/>
-      <TotalPrice mainDescription={mainDescription} price={price}/>
-      <Carousel category={category}/>
+      <Header storeName={storeName} />
+      <TotalPrice mainDescription={mainDescription} price={price} />
+      <Carousel category={category} />
       <LikeBox />
       <BottomNavBtn handleNextClick={handleNextClick} />
     </>
