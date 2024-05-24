@@ -1,4 +1,5 @@
-import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
+import { HTMLAttributes } from 'react';
+
 import {
   AlignCenter,
   AlignRow,
@@ -17,7 +18,12 @@ import DoneImg from '@/assets/svgs/done/done_img.svg?react';
 
 import { Theme } from '@/styles/theme';
 
-const ReviewContents = () => {
+interface ReviewContentsProps extends HTMLAttributes<HTMLAllCollection> {
+  children: React.ReactNode;
+}
+
+const ReviewContents = (props: ReviewContentsProps) => {
+  const { children } = props;
   return (
     <>
       <ContentBox
@@ -32,23 +38,7 @@ const ReviewContents = () => {
           backgroundColor: Theme.color.white,
         }}
       >
-        <section css={ReviewDetail}>
-          <DoneImg css={ImageStyle} width={40} height={40}></DoneImg>
-          <div css={AlignCenter}>
-            <Text size={'medium'}>하윙</Text>
-            <Text size={'small'} css={TextColor}>
-              3.8.금•리뷰 1062
-            </Text>
-          </div>
-        </section>
-        <section css={SlideWrapper}>
-          <div css={AlignRow}>
-            <Text size={'medium'} css={ReviewText}>
-              <p>좋아요굿이에요좋아요굿이요좋아요굿이요좋아요</p>
-            </Text>
-            <DoneImg width={48} height={48} css={ReviewImg}></DoneImg>
-          </div>
-        </section>
+        {children}
 
         <Badge size="small">
           <span>친절해요💓</span>
