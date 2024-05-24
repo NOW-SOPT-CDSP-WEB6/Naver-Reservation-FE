@@ -17,8 +17,6 @@ const ReviewPage = () => {
 
   const { state } = useLocation();
 
-  console.log(state);
-
   const handleNextClick = () => {
     mutate({ reservationId: +reservationId, writing: text });
 

@@ -2,16 +2,19 @@ import { css } from '@emotion/react';
 
 import { Theme } from '@/styles/theme';
 
-const WriteReview = css({
+const AlignCenter = css({
   display: 'flex',
+  alignItems: 'center',
+});
+
+const WriteReview = css({
+  justifyContent: 'center',
   width: '95px',
   height: '28px',
-
-  justifyContent: 'center',
-  alignItems: 'center',
   border: '0px',
   borderRadius: '8px',
   marginTop: '48px',
+  padding: '0px',
 });
 
 const Wrapper = css({
@@ -36,28 +39,17 @@ const DetailDate = css({
 
 const DoneBtnStyle = css({
   position: 'absolute',
-  top: '-5px',
-  right: '-5px',
+  right: 0,
+  cursor: 'pointer',
 });
 
 const boxStyle = css({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-
   position: 'relative',
   border: `1px solid ${Theme.color.lightGray}`,
   borderRadius: '13px',
   boxShadow: '1px 1px 6px 0px rgba(0, 0, 0, 0.05)',
   padding: '16px',
   marginRight: '10px',
-
-  '& > button': {
-    padding: '4px 8px',
-    marginTop: '40px',
-
-    fontSize: Theme.text.small.fontSize,
-  },
 });
 
-export { DetailDate, DetailTitle, DoneBtnStyle, Wrapper, WriteReview, boxStyle };
+export { AlignCenter, DetailDate, DetailTitle, DoneBtnStyle, Wrapper, WriteReview, boxStyle };

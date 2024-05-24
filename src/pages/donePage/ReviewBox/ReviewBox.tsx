@@ -3,12 +3,7 @@ import { useParams } from 'react-router-dom';
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
 import PlaceList from '@/pages/donePage/Place/Place';
 import MoreReview from '@/pages/donePage/ReviewBox/MoreReviewBox';
-import {
-  DetailDate,
-  DetailTitle,
-  DoneBtnStyle,
-  Wrapper,
-} from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
+import { DetailDate, DetailTitle, Wrapper } from '@/pages/donePage/ReviewBox/MoreReviewBox.style';
 import {
   AlignRow,
   ButtonStyle,
@@ -39,9 +34,9 @@ import Title from '@/components/@common/Title/Title';
 
 import { useReviewsInfoQuery } from '@/hooks/query/useReviewsInfo';
 
-import DoneBtn from '@/assets/svgs/done/done_btn_x.svg?react';
+import profImg from '@/assets/img/prof_img_1.png';
+import reviewImg from '@/assets/img/review.png';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
-import DoneImg from '@/assets/svgs/done/done_img.svg?react';
 import MemoIcon from '@/assets/svgs/done/memo.svg?react';
 import NextBtn from '@/assets/svgs/done/review_ic_next.svg?react';
 
@@ -49,6 +44,8 @@ const ReviewList = () => {
   const { reservationId } = useParams();
 
   const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
+  const TotalReviewNumber = ReviewInfo?.data.totalReviewCount;
+  console.log('데이터 : ', ReviewInfo);
 
   return (
     <>
@@ -73,14 +70,14 @@ const ReviewList = () => {
             4.35
           </Title>
           <Text size={'large'} css={mediumTextColor}>
-            2개 평점 (2명)
+            {TotalReviewNumber}개 평점 ({TotalReviewNumber}명)
           </Text>
         </p>
         <div css={SlideWrapper}>
           {ReviewInfo?.data.userReviewList.map((item) => (
             <ReviewContents key={item.reviewId}>
               <section css={ReviewDetail}>
-                <DoneImg css={ImageStyle} width={40} height={40}></DoneImg>
+                <img css={ImageStyle} src={profImg}></img>
                 <div css={AlignCenter}>
                   <Text size={'medium'}>{item?.name}</Text>
                   <Text size={'small'} css={TextColor}>
@@ -93,7 +90,7 @@ const ReviewList = () => {
                   <Text size={'medium'} css={ReviewText}>
                     {item?.content}
                   </Text>
-                  <DoneImg width={48} height={48} css={ReviewImg}></DoneImg>
+                  <img src={reviewImg} width={48} height={48} css={ReviewImg}></img>
                 </div>
               </section>
             </ReviewContents>
@@ -140,7 +137,6 @@ const ReviewList = () => {
             </Text>
           </MoreReview>
           <MoreReview>
-            <DoneBtn css={DoneBtnStyle} width={22} height={22} />
             <Text size="medium" css={DetailTitle}>
               르메인호텔 협재
             </Text>
