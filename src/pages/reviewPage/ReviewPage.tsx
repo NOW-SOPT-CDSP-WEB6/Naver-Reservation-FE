@@ -24,15 +24,13 @@ const ReviewPage = () => {
     console.log("클릭했다");
     mutate({ reservationId: +reservationId, writing: text });
 
-    if (status === 'success') {
       navigate(`/done/${reservationId}`, {
         state,
       });
-    }
   };
   return (
     <>
-      <Header />
+      <Header storeName={storeName} reservationDate={reservationDate} mainDescription={mainDescription} price={price}/>
       <DragDrop />
       <ReviewWriting text={text} setText={setText} />
       <BottomNavBtn handleNextClick={handleNextClick} />

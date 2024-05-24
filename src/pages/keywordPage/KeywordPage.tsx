@@ -15,7 +15,7 @@ const KeywordPage = () => {
   const { state } = useLocation();
   const { category, mainDescription, price, reservationDate, storeName } = state;
 
-  console.log(category, mainDescription, price, reservationDate, storeName);
+  console.log("keywordpage", {category, mainDescription, price, reservationDate, storeName}, {state});
 
   const handleNextClick = () => {
     navigate(`/review/${reservationId}`, {
@@ -25,9 +25,9 @@ const KeywordPage = () => {
   return (
     <>
       <Stepper />
-      <Header />
-      <TotalPrice />
-      <Carousel />
+      <Header storeName={storeName}/>
+      <TotalPrice mainDescription={mainDescription} price={price}/>
+      <Carousel category={category}/>
       <LikeBox />
       <BottomNavBtn handleNextClick={handleNextClick} />
     </>
