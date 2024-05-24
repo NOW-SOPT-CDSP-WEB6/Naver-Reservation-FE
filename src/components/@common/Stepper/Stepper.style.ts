@@ -1,30 +1,36 @@
-import { Theme } from "@/styles/theme";
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
+
+import { Theme } from '@/styles/theme';
+
+export const containerStyle = css({
+  padding: '14px 0px',
+});
 
 export const stepperWrapper = css({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 
-  padding: '4px 104px 0 110px'
-})
+  padding: '4px 104px 0 110px',
+});
 
-export const stepStyle = (active: boolean) => css({
-  width: '28px',
-  height: '28px',
-  padding: '5px',
+export const stepStyle = (active: boolean) =>
+  css({
+    width: '28px',
+    height: '28px',
+    padding: '5px',
 
-  borderRadius: '50%',
-  border: `1.2px solid ${Theme.color.lowLightGray}`,
-  backgroundColor: active ? Theme.color.naverBlue : Theme.color.white,
-})
+    borderRadius: '50%',
+    border: `1.2px solid ${Theme.color.lowLightGray}`,
+    backgroundColor: active ? Theme.color.naverBlue : Theme.color.white,
+  });
 
 export const lineStyle = css({
   width: '38.5px',
   height: 0,
 
   strokeWidth: '1.2px',
-})
+});
 export const detailWrapper = css({
   display: 'flex',
   justifyContent: 'space-between',
@@ -33,8 +39,9 @@ export const detailWrapper = css({
 
   fontSize: '12px',
   fontWeight: 500,
-})
+});
 
-export const detailStyle = (active: boolean) => css({
-  color: active ? Theme.color.naverBlue : Theme.color.darkgray,
-})
+export const detailStyle = (active: boolean) =>
+  css({
+    color: active ? Theme.color.naverBlue : Theme.color.darkgray,
+  });
