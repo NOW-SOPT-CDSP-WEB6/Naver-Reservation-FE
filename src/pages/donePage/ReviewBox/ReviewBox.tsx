@@ -48,7 +48,6 @@ const ReviewList = () => {
   const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
   const TotalReviewNumber = ReviewInfo?.data.totalReviewCount;
 
-  console.log('데이터 : ', ReviewInfo);
 
   return (
     <>

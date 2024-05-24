@@ -9,11 +9,12 @@ import { BADGE_CATEGORY } from '@/constants/badge';
 
 import * as s from './Carousel.style';
 
-interface CarouselProps {}
+interface CarouselProps {
+  category: string;
+}
 
-const Carousel = ({}: CarouselProps) => {
+const Carousel = ({ category = '뷰티' }: CarouselProps) => {
   const [isFullBadge, setIsFullBadge] = useState<boolean>(false);
-  const category = '뷰티';
 
   return (
     <ContentBox
@@ -31,7 +32,7 @@ const Carousel = ({}: CarouselProps) => {
         이 가게에 어울리는 키워드를 골라주세요.(1개~5개)
       </Text>
       <section css={s.carouselWrapper}>
-        {BADGE_CATEGORY[category].map((badge) => {
+        {BADGE_CATEGORY[category]?.map((badge) => {
           return (
             <CarouselCard
               badgeTitle={badge}

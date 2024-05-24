@@ -10,23 +10,31 @@ import {
 
 import Badge from '@/components/@common/Badge/Badge';
 import Stepper from '@/components/@common/Stepper/Stepper';
+import { convertDate } from '@/utils/date';
+import { addCommasToNumber } from '@/utils/price';
 
-const Header = () => {
+interface HeaderProps {
+  storeName: string;
+  reservationDate: string;
+  mainDescription: string;
+  price: number;
+}
+const Header = ({storeName, reservationDate, mainDescription, price}: HeaderProps) => {
   return (
     <div style={{backgroundColor: "white"}}>
       <Stepper />
       <section css={headerWrapper}>
-        <h3 css={headerTitle}>아반트헤어 압구정점</h3>
+        <h3 css={headerTitle}>{storeName}</h3>
         <ul>
           <li css={detailList}>
             <div css={detailIcon}>⏱️</div>
-            <span css={mainDetail}>2024.4.14(월)</span>
+            <span css={mainDetail}>{convertDate(reservationDate)}</span>
             <span css={subDetail}>&nbsp;· 2번째 방문</span>
           </li>
           <li css={detailList}>
             <div css={detailIcon}>📋</div>
-            <span css={mainDetail}>지나 수석 디자이너</span>
-            <span css={subDetail}>&nbsp;· 33,000원</span>
+            <span css={mainDetail}>{mainDescription}</span>
+            <span css={subDetail}>&nbsp;· {addCommasToNumber(price)}원</span>
           </li>
           <li css={detailList}>
             <div css={detailIcon}>🚶🏻</div>

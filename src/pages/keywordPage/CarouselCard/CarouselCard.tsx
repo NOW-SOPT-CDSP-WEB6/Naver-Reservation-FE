@@ -14,7 +14,6 @@ interface CarouselCardProps {
 }
 
 const CarouselCard = ({ badgeTitle, isFullBadge, setIsFullBadge }: CarouselCardProps) => {
-  console.log({ isFullBadge }, +isFullBadge);
   return (
     <section css={s.Wrapper}>
       <div css={s.title}>{badgeTitle}</div>
