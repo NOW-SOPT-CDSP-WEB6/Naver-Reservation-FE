@@ -26,4 +26,6 @@ export const buttonStyle = css({
   flexDirection: 'column',
   alignItems: 'center',
   gap: '8px',
+
+  cursor: 'pointer',
 });

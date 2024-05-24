@@ -11,16 +11,18 @@ export const chipsMenuStyle = css({
 });
 
 export const chipStyle = css({
+  padding: '6px 12px',
+
   border: `1px solid ${Theme.color.border}`,
   borderRadius: Theme.borderRadius.medium,
 
   backgroundColor: Theme.color.white,
   boxShadow: '0px 3px 7px 0px rgba(0, 0, 0, 0.05)',
 
-  padding: '6px 12px',
-
   fontSize: Theme.text.medium.fontSize,
   lineHeight: Theme.text.medium.lineHeight,
+
+  cursor: 'pointer',
 });
 
 export const selectedStyle = (isSelected: boolean) =>

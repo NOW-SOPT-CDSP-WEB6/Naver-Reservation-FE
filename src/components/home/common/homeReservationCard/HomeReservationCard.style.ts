@@ -8,6 +8,10 @@ export const titleWrapperStyle = css({
   alignItems: 'center',
   padding: '8px 0px',
 
+  '& svg': {
+    cursor: 'pointer',
+  },
+
   '& > header': {
     display: 'flex',
     flexDirection: 'column',

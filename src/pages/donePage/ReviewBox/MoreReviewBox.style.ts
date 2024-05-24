@@ -39,17 +39,24 @@ const DetailDate = css({
 
 const DoneBtnStyle = css({
   position: 'absolute',
-  right: 0,
+  top: '-5px',
+  right: '-5px',
   cursor: 'pointer',
 });
 
 const boxStyle = css({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+
   position: 'relative',
+
+  padding: '16px',
+  marginRight: '10px',
+
   border: `1px solid ${Theme.color.lightGray}`,
   borderRadius: '13px',
   boxShadow: '1px 1px 6px 0px rgba(0, 0, 0, 0.05)',
-  padding: '16px',
-  marginRight: '10px',
 });
 
-export { WriteReview, Wrapper, DetailTitle, DetailDate, DoneBtnStyle, AlignCenter, boxStyle };
+export { AlignCenter, DetailDate, DetailTitle, DoneBtnStyle, Wrapper, WriteReview, boxStyle };

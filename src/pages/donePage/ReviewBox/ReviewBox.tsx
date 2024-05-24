@@ -18,12 +18,14 @@ import {
   mediumTextColor,
 } from '@/pages/donePage/ReviewBox/ReviewBox.style';
 import ReviewContents from '@/pages/donePage/ReviewContents/ReviewContents';
-import { TextColor } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewDetail } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ImageStyle } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { AlignCenter } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewText } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewImg } from '@/pages/donePage/ReviewContents/ReviewContents.style';
+import {
+  AlignCenter,
+  ImageStyle,
+  ReviewDetail,
+  ReviewImg,
+  ReviewText,
+  TextColor,
+} from '@/pages/donePage/ReviewContents/ReviewContents.style';
 
 import Button from '@/components/@common/Button/Button';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
@@ -35,7 +37,6 @@ import { useReviewsInfoQuery } from '@/hooks/query/useReviewsInfo';
 import profImg from '@/assets/img/prof_img_1.png';
 import reviewImg from '@/assets/img/review.png';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
-import DoneImg from '@/assets/svgs/done/done_img.svg?react';
 import MemoIcon from '@/assets/svgs/done/memo.svg?react';
 import NextBtn from '@/assets/svgs/done/review_ic_next.svg?react';
 
