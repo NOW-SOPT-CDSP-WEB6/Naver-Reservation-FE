@@ -1,4 +1,3 @@
-import { Children } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { alignCenter, blueHighlight } from '@/pages/donePage/DoneHeader/DoneHeader.style';
@@ -24,19 +23,21 @@ import {
   mediumTextColor,
 } from '@/pages/donePage/ReviewBox/ReviewBox.style';
 import ReviewContents from '@/pages/donePage/ReviewContents/ReviewContents';
-import { TextColor } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewDetail } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ImageStyle } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { AlignCenter } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewText } from '@/pages/donePage/ReviewContents/ReviewContents.style';
-import { ReviewImg } from '@/pages/donePage/ReviewContents/ReviewContents.style';
+import {
+  AlignCenter,
+  ImageStyle,
+  ReviewDetail,
+  ReviewImg,
+  ReviewText,
+  TextColor,
+} from '@/pages/donePage/ReviewContents/ReviewContents.style';
 
 import Button from '@/components/@common/Button/Button';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';
 
-import { useReviewsInfoQuery } from '@/hooks/reservation/useReviewsInfo';
+import { useReviewsInfoQuery } from '@/hooks/query/useReviewsInfo';
 
 import DoneBtn from '@/assets/svgs/done/done_btn_x.svg?react';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
@@ -48,7 +49,6 @@ const ReviewList = () => {
   const { reservationId } = useParams();
 
   const ReviewInfo = useReviewsInfoQuery(+(reservationId || 0));
-  console.log('데이터 : ', ReviewInfo);
 
   return (
     <>
