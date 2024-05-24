@@ -15,4 +15,5 @@ export const layoutStyle = css({
   },
 
   backgroundColor: Theme.color.background1,
+
 });

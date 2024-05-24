@@ -9,11 +9,12 @@ import { BADGE_CATEGORY } from '@/constants/badge';
 
 import * as s from './Carousel.style';
 
-interface CarouselProps {}
+interface CarouselProps {
+  category: string;
+}
 
-const Carousel = ({}: CarouselProps) => {
+const Carousel = ({category = '뷰티'}: CarouselProps) => {
   const [isFullBadge, setIsFullBadge] = useState<boolean>(false);
-  const category = '뷰티';
 
   return (
     <ContentBox
