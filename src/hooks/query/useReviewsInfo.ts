@@ -2,12 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 
 import { AxiosError } from 'axios';
 
-import { ReviewInfoItemType } from '@/type/review';
+import { ReviewInfoType } from '@/type/review';
 
 import { getReview } from '@/api';
 
 export const useReviewsInfoQuery = (reservationId: number = 0) => {
-  const { data: RiviewList } = useQuery<ReviewInfoItemType, AxiosError>({
+  const { data: RiviewList } = useQuery<ReviewInfoType, AxiosError>({
     queryKey: ['review'],
     queryFn: () => getReview(reservationId),
   });

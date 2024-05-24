@@ -40,6 +40,7 @@ export const ReviewText = css({
 export const ReviewImg = css({
   width: '48px',
   height: '48px',
+
   borderRadius: '6px',
 });
 

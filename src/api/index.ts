@@ -26,14 +26,6 @@ export const postReservationMark = async (reservationId: number) => {
   return data;
 };
 
-export const postReviewWriting = async ({ reservationId, writing }: ReviewAPIType) => {
-  const { data } = await axiosInstance.post(`${END_POINTS.REVIEW_WRITING}/${reservationId}`, {
-    content: writing,
-  });
-
-  return data;
-};
-
 export const getReview = async (storeId: number) => {
   const { data } = await axiosInstance.get(`${END_POINTS.RESERVATION_REVIEW}/${storeId}`);
 

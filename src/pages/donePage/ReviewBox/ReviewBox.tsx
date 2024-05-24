@@ -36,7 +36,7 @@ import ContentBox from '@/components/@common/ContentBox/ContentBox';
 import Text from '@/components/@common/Text/Text';
 import Title from '@/components/@common/Title/Title';
 
-import { useReviewsInfoQuery } from '@/hooks/query/useReviewsInfo';
+import { useReviewsInfoQuery } from '@/hooks/reservation/useReviewsInfo';
 
 import DoneBtn from '@/assets/svgs/done/done_btn_x.svg?react';
 import StarImg from '@/assets/svgs/done/done_ic_star_red.svg?react';
@@ -76,7 +76,29 @@ const ReviewList = () => {
             2개 평점 (2명)
           </Text>
         </p>
-        <div css={SlideWrapper}>{}</div>
+        <div css={SlideWrapper}>
+          {ReviewInfo?.data.userReviewList.map((item) => (
+            <ReviewContents key={item.reviewId}>
+              <section css={ReviewDetail}>
+                <DoneImg css={ImageStyle} width={40} height={40}></DoneImg>
+                <div css={AlignCenter}>
+                  <Text size={'medium'}>{item?.name}</Text>
+                  <Text size={'small'} css={TextColor}>
+                    {item?.reviewDate}
+                  </Text>
+                </div>
+              </section>
+              <section css={SlideWrapper}>
+                <div css={AlignRow}>
+                  <Text size={'medium'} css={ReviewText}>
+                    {item?.content}
+                  </Text>
+                  <DoneImg width={48} height={48} css={ReviewImg}></DoneImg>
+                </div>
+              </section>
+            </ReviewContents>
+          ))}
+        </div>
       </ContentBox>
       <ContentBox
         variant="round"

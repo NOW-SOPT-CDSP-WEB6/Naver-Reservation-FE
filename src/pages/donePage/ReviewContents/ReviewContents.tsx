@@ -1,20 +1,7 @@
 import { HTMLAttributes } from 'react';
 
-import {
-  AlignCenter,
-  AlignRow,
-  ImageStyle,
-  ReviewDetail,
-  ReviewImg,
-  ReviewText,
-  TextColor,
-} from '@/pages/donePage/ReviewContents/ReviewContents.style';
-
 import Badge from '@/components/@common/Badge/Badge';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
-import Text from '@/components/@common/Text/Text';
-
-import DoneImg from '@/assets/svgs/done/done_img.svg?react';
 
 import { Theme } from '@/styles/theme';
 
@@ -24,6 +11,7 @@ interface ReviewContentsProps extends HTMLAttributes<HTMLAllCollection> {
 
 const ReviewContents = (props: ReviewContentsProps) => {
   const { children } = props;
+
   return (
     <>
       <ContentBox
@@ -39,7 +27,6 @@ const ReviewContents = (props: ReviewContentsProps) => {
         }}
       >
         {children}
-
         <Badge size="small">
           <span>친절해요💓</span>
         </Badge>
