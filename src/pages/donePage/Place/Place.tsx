@@ -4,7 +4,9 @@ import {
   CafeText,
   FavIconStyle,
   Name,
-  PlaceStyle,
+  PlaceStyle1,
+  PlaceStyle2,
+  PlaceStyle3,
   Wrapper,
 } from '@/pages/donePage/Place/Place.style';
 
@@ -19,7 +21,7 @@ const PlaceList = () => {
     <>
       <section css={Wrapper}>
         <ContentBox styles={{ marginRight: '10px' }}>
-          <div css={PlaceStyle}>
+          <div css={PlaceStyle1}>
             <Text size="small" css={Address}>
               서울 용산구 이태원로55...
             </Text>
@@ -36,7 +38,7 @@ const PlaceList = () => {
           </div>
         </ContentBox>
         <ContentBox styles={{ marginRight: '10px' }}>
-          <div css={PlaceStyle}>
+          <div css={PlaceStyle2} className="hongdae">
             <Text size="small" css={Address}>
               서울 마포구 와우산로15...
             </Text>
@@ -52,7 +54,7 @@ const PlaceList = () => {
           </div>
         </ContentBox>
         <ContentBox styles={{ marginRight: '10px' }}>
-          <div css={PlaceStyle}>
+          <div css={PlaceStyle3} className="seongsu">
             <Text size="small" css={Address}>
               서울 성동구 연무장길 56...
             </Text>

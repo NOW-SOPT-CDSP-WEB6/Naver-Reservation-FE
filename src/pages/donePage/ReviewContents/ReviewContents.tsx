@@ -1,13 +1,4 @@
-import { SlideWrapper } from '@/pages/donePage/ReviewBox/ReviewBox.style';
-import {
-  AlignCenter,
-  AlignRow,
-  ImageStyle,
-  ReviewDetail,
-  ReviewImg,
-  ReviewText,
-  TextColor,
-} from '@/pages/donePage/ReviewContents/ReviewContents.style';
+import { HTMLAttributes } from 'react';
 
 import Badge from '@/components/@common/Badge/Badge';
 import ContentBox from '@/components/@common/ContentBox/ContentBox';
