@@ -50,7 +50,7 @@ const HomePage = () => {
               아반테헤어 압구정점
             </HomeMostReservation.item>
             <HomeMostReservation.item rank={2} maxCount={2} currentCount={1}>
-              준오헤어 가든강남점
+              스시다온
             </HomeMostReservation.item>
           </HomeMostReservation>
         </section>
@@ -69,7 +69,7 @@ const HomePage = () => {
             review={item.review}
             starMark={item.starMark}
             category={item.category}
-            label="2번째, 7개월만의 예약"
+            label={item.reservationId === 2 ? '2번째, 7개월만의 예약' : '첫 번째 예약'}
             onMark={onMark}
           />
         ))}
