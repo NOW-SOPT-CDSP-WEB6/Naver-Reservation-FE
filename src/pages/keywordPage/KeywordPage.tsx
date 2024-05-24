@@ -13,9 +13,6 @@ const KeywordPage = () => {
   const navigate = useNavigate();
 
   const { state } = useLocation();
-  const { category, mainDescription, price, reservationDate, storeName } = state;
-
-  console.log(category, mainDescription, price, reservationDate, storeName);
 
   const handleNextClick = () => {
     navigate(`/review/${reservationId}`, {

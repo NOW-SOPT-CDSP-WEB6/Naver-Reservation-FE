@@ -23,8 +23,6 @@ const HomePage = () => {
   const reservationInfo = useReservationInfoQuery(selectedMenu);
   const { mutate: onMark } = useReservationMarkMutation();
 
-  console.log(reservationData);
-
   const handleSelect = (item: string) => {
     setSelectedMenu(item);
   };

@@ -8,7 +8,6 @@ import ReviewWriting from '@/pages/reviewPage/ReviewWriting/ReviewWriting';
 import BottomNavBtn from '@/components/@common/BottomNavBtn/BottomNavBtn';
 
 import { useReviewWritingMutation } from '@/hooks/query/useReviewWritingMutation';
-import Stepper from '@/components/@common/Stepper/Stepper';
 
 const ReviewPage = () => {
   const { mutate, status } = useReviewWritingMutation();
@@ -18,9 +17,7 @@ const ReviewPage = () => {
 
   const { state } = useLocation();
 
-  const { category, mainDescription, price, reservationDate, storeName } = state;
-
-  console.log(category, mainDescription, price, reservationDate, storeName);
+  console.log(state);
 
   const handleNextClick = () => {
     mutate({ reservationId: +reservationId, writing: text });
