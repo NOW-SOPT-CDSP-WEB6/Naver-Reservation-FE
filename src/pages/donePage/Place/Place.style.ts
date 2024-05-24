@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import Img3 from '@/assets/img/bread.png';
 import Img1 from '@/assets/img/done_img_1.png';
 import Img2 from '@/assets/img/done_img_2.png';
 
@@ -46,7 +47,7 @@ export const PlaceStyle3 = css({
   objectFit: 'contain',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: `url(${Img1})`,
+  backgroundImage: `url(${Img3})`,
 });
 
 export const Address = css({
