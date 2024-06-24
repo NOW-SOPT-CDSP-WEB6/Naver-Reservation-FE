@@ -1,6 +1,7 @@
 // vite.config.ts
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
+import { compression } from 'vite-plugin-compression2';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -16,5 +17,6 @@ export default defineConfig({
         icon: true,
       },
     }),
+    compression(),
   ],
 });
