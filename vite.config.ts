@@ -17,6 +17,9 @@ export default defineConfig({
         icon: true,
       },
     }),
-    compression(),
+    compression({
+      include: [/\.(ts)$/, /\.(tsx)$/],
+      threshold: 1400,
+    }),
   ],
 });
